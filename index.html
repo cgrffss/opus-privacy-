@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPUS — Privacy Policy</title>
+    <style>
+        :root {
+            --obsidian: #0A0A0A;
+            --warm-sand: #D4C4A0;
+            --warm-cream: #F5F0E8;
+            --warm-muted: #8A7F6E;
+            --dim-warm: #3A3530;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--obsidian);
+            color: var(--warm-cream);
+            font-family: -apple-system, 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 32px;
+            font-weight: normal;
+            color: var(--warm-sand);
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--warm-muted);
+            font-size: 14px;
+            margin-bottom: 48px;
+        }
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            font-weight: normal;
+            color: var(--warm-sand);
+            margin-top: 40px;
+            margin-bottom: 12px;
+            letter-spacing: 0.04em;
+        }
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--warm-cream);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+        p { color: var(--warm-cream); margin-bottom: 16px; }
+        ul { padding-left: 20px; margin-bottom: 16px; }
+        li { color: var(--warm-cream); margin-bottom: 8px; }
+        .lang-divider {
+            border: none;
+            border-top: 1px solid var(--dim-warm);
+            margin: 60px 0;
+        }
+        .effective-date {
+            color: var(--warm-muted);
+            font-size: 13px;
+            margin-bottom: 32px;
+        }
+        a { color: var(--warm-sand); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .highlight-box {
+            border: 1px solid var(--dim-warm);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            background: rgba(212, 196, 160, 0.04);
+        }
+        .highlight-box p { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ ENGLISH ═══ -->
+<h1>OPUS</h1>
+<p class="subtitle">Privacy Policy</p>
+
+<div class="highlight-box">
+    <p><strong>The short version:</strong> Your health data stays on your device. We collect nothing. We sell nothing. We track nothing.</p>
+</div>
+
+<p class="effective-date">Effective date: 2025-01-01 · Last updated: 2025-01-01</p>
+
+<h2>1. Who we are</h2>
+<p>OPUS ("the app", "we", "our") is a personal health intelligence app for iOS. We do not operate servers that receive your personal data. We are not a data broker, an advertising platform, or a health services provider.</p>
+
+<h2>2. What data we access and how we use it</h2>
+
+<h3>HealthKit Data</h3>
+<ul>
+    <li><strong>What we read:</strong> Sleep analysis, heart rate variability (HRV), resting heart rate, step count, active energy, and workout summaries.</li>
+    <li><strong>Purpose:</strong> To compute your daily biological score, mode, and trend analysis — entirely on your device.</li>
+    <li><strong>Where it goes:</strong> Nowhere. HealthKit data is processed locally and stored only in the app's private container (Documents folder). It is never transmitted to any server, third party, or analytics service.</li>
+    <li><strong>We do not write to HealthKit.</strong> OPUS is read-only.</li>
+</ul>
+
+<h3>Camera / Photos</h3>
+<ul>
+    <li><strong>What we capture:</strong> A single front-camera photo per scan session.</li>
+    <li><strong>Purpose:</strong> On-device skin analysis using Apple's Vision framework and Core Image. The analysis runs in memory and produces a score. The photo (if saved) is stored as a JPEG in your device's Documents folder under a date-keyed filename.</li>
+    <li><strong>Where it goes:</strong> Nowhere. Photos are never uploaded, shared, or accessible outside the OPUS app sandbox.</li>
+    <li><strong>Deletion:</strong> Photos are deleted when you use "Delete All Data" in Settings, or when you delete the app.</li>
+</ul>
+
+<h3>iCloud Sync (Optional)</h3>
+<ul>
+    <li><strong>What we sync:</strong> If you are signed into iCloud, daily health vectors and your profile preferences are optionally synced to your iCloud private database (CloudKit).</li>
+    <li><strong>Who can access it:</strong> Only you. CloudKit private databases are end-to-end encrypted by Apple and are not accessible to us, Apple employees, or any third party.</li>
+    <li><strong>How to disable:</strong> Sign out of iCloud, or use "Delete All Data" in Settings to remove all CloudKit records.</li>
+</ul>
+
+<h3>Notifications</h3>
+<ul>
+    <li>OPUS uses local notifications (scheduled on your device) for morning briefs and weekly reports.</li>
+    <li>No push notification servers are involved. No notification tokens are collected or transmitted.</li>
+</ul>
+
+<h3>UserDefaults / Local Storage</h3>
+<ul>
+    <li>OPUS stores app preferences (notification settings, units, streak count) in your device's local UserDefaults.</li>
+    <li>Shared app group UserDefaults (group.com.opus.bio) are used only for widget data display on your Home Screen.</li>
+</ul>
+
+<h2>3. What we do NOT do</h2>
+<ul>
+    <li>We do not collect analytics or usage data.</li>
+    <li>We do not use advertising SDKs or ad networks.</li>
+    <li>We do not use tracking pixels, fingerprinting, or device identifiers.</li>
+    <li>We do not sell, rent, or share your data with any third party.</li>
+    <li>We do not use third-party crash reporting or performance monitoring tools.</li>
+    <li>We do not require account creation.</li>
+    <li>We do not require an internet connection for core functionality.</li>
+</ul>
+
+<h2>4. In-App Purchases (StoreKit 2)</h2>
+<p>Subscriptions are managed entirely through Apple's App Store and StoreKit 2. We do not see or store your payment information. Apple processes all transactions. Refer to Apple's Privacy Policy (<a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>) for purchase data handling.</p>
+
+<h2>5. Children's Privacy</h2>
+<p>OPUS is not directed at children under 13. We do not knowingly collect any information from children. If you believe a child has provided health data through this app, please contact us so we can assist with deletion.</p>
+
+<h2>6. Data Retention & Deletion</h2>
+<p>All data is stored locally on your device or in your personal iCloud account. You have full control:</p>
+<ul>
+    <li><strong>Delete All Data</strong> (Settings → Data & Privacy): Clears all local files, photos, CloudKit records, and UserDefaults. Returns app to first-launch state.</li>
+    <li><strong>Delete App</strong>: Removes all local data automatically. Note: iCloud data persists until cleared via Settings or iCloud.com → Manage Storage.</li>
+</ul>
+
+<h2>7. Security</h2>
+<p>All local files are stored in the app's sandboxed Documents directory, protected by iOS file-system encryption (hardware-level). iCloud data is encrypted in transit and at rest by Apple. We do not implement custom encryption (ITSAppUsesNonExemptEncryption: NO).</p>
+
+<h2>8. Changes to This Policy</h2>
+<p>We may update this policy as the app evolves. The effective date above reflects the latest revision. Continued use of the app constitutes acceptance of the updated policy.</p>
+
+<h2>9. Contact</h2>
+<p>Questions or data requests: <a href="mailto:privacy@opus-app.com">privacy@opus-app.com</a><br>
+Support: <a href="https://opus-app.com/support">opus-app.com/support</a></p>
+
+<h2>10. Medical Disclaimer</h2>
+<p>OPUS is not a medical device and is not intended to diagnose, treat, cure, or prevent any disease or health condition. Information provided is for personal observation and general wellness purposes only. It does not constitute medical advice and should not replace consultation with a qualified healthcare professional.</p>
+
+<hr class="lang-divider">
+
+<!-- ═══════════════════════════════════════════════════ TURKISH ═══ -->
+<h1>OPUS</h1>
+<p class="subtitle">Gizlilik Politikası</p>
+
+<div class="highlight-box">
+    <p><strong>Kısa versiyon:</strong> Sağlık verileriniz cihazınızda kalır. Hiçbir şey toplamıyoruz. Hiçbir şey satmıyoruz. Takip etmiyoruz.</p>
+</div>
+
+<p class="effective-date">Yürürlük tarihi: 2025-01-01 · Son güncelleme: 2025-01-01</p>
+
+<h2>1. Biz kimiz?</h2>
+<p>OPUS ("uygulama", "biz"), iOS için kişisel bir biyolojik zeka uygulamasıdır. Kişisel verilerinizi alan sunuculara sahip değiliz. Bir veri aracısı, reklam platformu veya sağlık hizmetleri sağlayıcısı değiliz.</p>
+
+<h2>2. Hangi verilere erişiyoruz ve nasıl kullanıyoruz?</h2>
+
+<h3>HealthKit Verileri</h3>
+<ul>
+    <li><strong>Okuduğumuz veriler:</strong> Uyku analizi, kalp ritim değişkenliği (HRV), dinlenme nabzı, adım sayısı, aktif enerji ve antrenman özetleri.</li>
+    <li><strong>Amaç:</strong> Günlük biyolojik skorunuzu, modunuzu ve trend analizinizi tamamen cihazınızda hesaplamak.</li>
+    <li><strong>Nereye gidiyor:</strong> Hiçbir yere. HealthKit verileri yerel olarak işlenir ve yalnızca uygulamanın özel alanında (Documents klasöründe) depolanır. Herhangi bir sunucuya, üçüncü tarafa veya analiz servisine iletilmez.</li>
+    <li><strong>HealthKit'e yazmıyoruz.</strong> OPUS yalnızca okuma modundadır.</li>
+</ul>
+
+<h3>Kamera / Fotoğraflar</h3>
+<ul>
+    <li><strong>Ne kaydediyoruz:</strong> Her tarama oturumu için tek bir ön kamera fotoğrafı.</li>
+    <li><strong>Amaç:</strong> Apple'ın Vision çerçevesi ve Core Image kullanarak cihaz üzerinde cilt analizi. Analiz bellekte çalışır ve bir skor üretir. Fotoğraf (kaydedilirse) cihazınızın Documents klasöründe tarih anahtarlı bir JPEG olarak saklanır.</li>
+    <li><strong>Nereye gidiyor:</strong> Hiçbir yere. Fotoğraflar hiçbir zaman yüklenmez, paylaşılmaz veya OPUS uygulama korumalı alanının dışından erişilemez.</li>
+</ul>
+
+<h3>iCloud Senkronizasyonu (İsteğe Bağlı)</h3>
+<ul>
+    <li><strong>Ne senkronize ediyoruz:</strong> iCloud'a giriş yaptıysanız, günlük sağlık vektörleri ve profil tercihleriniz isteğe bağlı olarak özel iCloud veritabanınıza (CloudKit) senkronize edilir.</li>
+    <li><strong>Kim erişebilir:</strong> Yalnızca siz. CloudKit özel veritabanları Apple tarafından uçtan uca şifrelenir ve bize, Apple çalışanlarına veya herhangi bir üçüncü tarafa erişilemez.</li>
+</ul>
+
+<h2>3. Yapmadıklarımız</h2>
+<ul>
+    <li>Analitik veya kullanım verisi toplamıyoruz.</li>
+    <li>Reklam SDK'ları veya reklam ağları kullanmıyoruz.</li>
+    <li>Verilerinizi üçüncü taraflarla satmıyor, kiralamıyor veya paylaşmıyoruz.</li>
+    <li>Hesap oluşturma gerektirmiyoruz.</li>
+    <li>Temel işlevler için internet bağlantısı gerektirmiyoruz.</li>
+</ul>
+
+<h2>4. Veri Silme</h2>
+<p>Tüm veriler cihazınızda veya kişisel iCloud hesabınızda yerel olarak saklanır. Tam kontrolünüz sizde:</p>
+<ul>
+    <li><strong>Tüm Verileri Sil</strong> (Ayarlar → Veri ve Gizlilik): Tüm yerel dosyaları, fotoğrafları, CloudKit kayıtlarını ve UserDefaults'u temizler.</li>
+    <li><strong>Uygulamayı Sil:</strong> Tüm yerel verileri otomatik olarak kaldırır.</li>
+</ul>
+
+<h2>5. Tıbbi Sorumluluk Reddi</h2>
+<p>OPUS tıbbi bir cihaz değildir ve herhangi bir hastalık veya sağlık durumunu teşhis etmek, tedavi etmek, iyileştirmek veya önlemek amacıyla kullanılamaz. Sağlanan bilgiler yalnızca kişisel gözlem ve genel iyilik amacıyla sunulmaktadır. Tıbbi tavsiye niteliği taşımaz ve nitelikli bir sağlık uzmanıyla yapılacak konsültasyonun yerini tutmaz.</p>
+
+<h2>6. İletişim</h2>
+<p>Sorular veya veri talepleri için: <a href="mailto:privacy@opus-app.com">privacy@opus-app.com</a><br>
+Destek: <a href="https://opus-app.com/support">opus-app.com/support</a></p>
+
+</body>
+</html>
