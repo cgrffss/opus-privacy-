@@ -1,233 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPUS — Privacy Policy</title>
     <style>
-        :root {
-            --obsidian: #0A0A0A;
-            --warm-sand: #D4C4A0;
-            --warm-cream: #F5F0E8;
-            --warm-muted: #8A7F6E;
-            --dim-warm: #3A3530;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: var(--obsidian);
-            color: var(--warm-cream);
-            font-family: -apple-system, 'Inter', sans-serif;
-            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #e8e0d4;
             line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
             max-width: 720px;
             margin: 0 auto;
-            padding: 40px 24px 80px;
+            padding: 40px 20px;
         }
         h1 {
-            font-family: Georgia, 'Times New Roman', serif;
-            font-size: 32px;
-            font-weight: normal;
-            color: var(--warm-sand);
-            letter-spacing: 0.08em;
+            font-family: 'Georgia', serif;
+            font-size: 28px;
+            color: #f5f0e8;
             margin-bottom: 8px;
+            letter-spacing: 2px;
         }
         .subtitle {
-            color: var(--warm-muted);
-            font-size: 14px;
-            margin-bottom: 48px;
+            font-size: 13px;
+            color: #c4b69c;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        .lang-toggle {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 36px;
+        }
+        .lang-btn {
+            padding: 6px 16px;
+            border: 1px solid #c4b69c;
+            background: transparent;
+            color: #c4b69c;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s;
+            letter-spacing: 1px;
+        }
+        .lang-btn.active {
+            background: #c4b69c;
+            color: #1a1a1a;
         }
         h2 {
-            font-family: Georgia, serif;
-            font-size: 20px;
-            font-weight: normal;
-            color: var(--warm-sand);
-            margin-top: 40px;
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            color: #c4b69c;
+            margin-top: 32px;
             margin-bottom: 12px;
-            letter-spacing: 0.04em;
         }
-        h3 {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--warm-cream);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-top: 24px;
-            margin-bottom: 8px;
+        p { font-size: 14px; margin-bottom: 16px; color: #d4ccc0; }
+        ul { margin: 8px 0 16px 20px; font-size: 14px; color: #d4ccc0; }
+        li { margin-bottom: 6px; }
+        .highlight {
+            background: rgba(196, 182, 156, 0.1);
+            border-left: 3px solid #c4b69c;
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 6px 6px 0;
         }
-        p { color: var(--warm-cream); margin-bottom: 16px; }
-        ul { padding-left: 20px; margin-bottom: 16px; }
-        li { color: var(--warm-cream); margin-bottom: 8px; }
-        .lang-divider {
-            border: none;
-            border-top: 1px solid var(--dim-warm);
-            margin: 60px 0;
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(196, 182, 156, 0.2);
+            font-size: 12px;
+            color: #8a8070;
         }
-        .effective-date {
-            color: var(--warm-muted);
-            font-size: 13px;
-            margin-bottom: 32px;
-        }
-        a { color: var(--warm-sand); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .highlight-box {
-            border: 1px solid var(--dim-warm);
-            border-radius: 8px;
-            padding: 20px 24px;
-            margin-bottom: 24px;
-            background: rgba(212, 196, 160, 0.04);
-        }
-        .highlight-box p { margin-bottom: 0; }
+        a { color: #c4b69c; }
+        .section { display: none; }
+        .section.active { display: block; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>OPUS</h1>
+        <p class="subtitle">Privacy Policy</p>
 
-<!-- ═══════════════════════════════════════════════════ ENGLISH ═══ -->
-<h1>OPUS</h1>
-<p class="subtitle">Privacy Policy</p>
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="showLang('tr', this)">Türkçe</button>
+            <button class="lang-btn" onclick="showLang('en', this)">English</button>
+            <button class="lang-btn" onclick="showLang('de', this)">Deutsch</button>
+            <button class="lang-btn" onclick="showLang('fr', this)">Français</button>
+            <button class="lang-btn" onclick="showLang('es', this)">Español</button>
+            <button class="lang-btn" onclick="showLang('ja', this)">日本語</button>
+            <button class="lang-btn" onclick="showLang('ko', this)">한국어</button>
+        </div>
 
-<div class="highlight-box">
-    <p><strong>The short version:</strong> Your health data stays on your device. We collect nothing. We sell nothing. We track nothing.</p>
-</div>
+        <!-- ═══ TÜRKÇE ═══ -->
+        <div id="tr" class="section active">
+            <p><strong>Son güncelleme:</strong> 24 Şubat 2026</p>
 
-<p class="effective-date">Effective date: 2025-01-01 · Last updated: 2025-01-01</p>
+            <h2>1. Genel Bakış</h2>
+            <p>OPUS, biyolojik sinyallerinizi takip eden ve kişiselleştirilmiş sağlık içgörüleri sunan bir iOS uygulamasıdır. Gizliliğiniz bizim için en önemli önceliktir.</p>
+            <div class="highlight"><strong>Temel ilkemiz:</strong> Tüm verileriniz cihazınızda kalır. Hiçbir kişisel sağlık verisi harici sunuculara gönderilmez.</div>
 
-<h2>1. Who we are</h2>
-<p>OPUS ("the app", "we", "our") is a personal health intelligence app for iOS. We do not operate servers that receive your personal data. We are not a data broker, an advertising platform, or a health services provider.</p>
+            <h2>2. Toplanan Veriler</h2>
+            <p><strong>a) Apple Sağlık (HealthKit) Verileri</strong></p>
+            <ul><li>Uyku süresi ve uyku evreleri</li><li>Kalp atış hızı değişkenliği (HRV)</li><li>Dinlenme kalp atış hızı</li><li>Kan oksijen doygunluğu (SpO2)</li><li>Günlük adım sayısı ve aktivite verileri</li></ul>
+            <p><strong>b) Kamera Verileri</strong></p>
+            <ul><li>Cilt taraması fotoğrafları (ön kamera ile)</li><li>Fotoğraflar şifreli olarak yalnızca cihazınızda saklanır</li></ul>
+            <p><strong>c) Manuel Giriş Verileri</strong></p>
+            <ul><li>Kafein tüketimi</li><li>Alkol tüketimi</li><li>Su tüketimi (hidrasyon)</li><li>Profil bilgileri (isim, yaş, cinsiyet — isteğe bağlı)</li><li>Regl döngüsü takibi (isteğe bağlı)</li></ul>
 
-<h2>2. What data we access and how we use it</h2>
+            <h2>3. Verilerin Kullanım Amacı</h2>
+            <ul><li>Kişisel biyolojik baseline hesaplama</li><li>Günlük mod belirleme (Dinlen / Devam / Zorla)</li><li>Korelasyon ve pattern analizi</li><li>Kişiselleştirilmiş içgörü ve öneriler</li></ul>
+            <div class="highlight">OPUS bir sağlık takip uygulamasıdır, tıbbi cihaz değildir. Sağlanan bilgiler tıbbi teşhis, tanı veya tedavi yerine geçmez.</div>
 
-<h3>HealthKit Data</h3>
-<ul>
-    <li><strong>What we read:</strong> Sleep analysis, heart rate variability (HRV), resting heart rate, step count, active energy, and workout summaries.</li>
-    <li><strong>Purpose:</strong> To compute your daily biological score, mode, and trend analysis — entirely on your device.</li>
-    <li><strong>Where it goes:</strong> Nowhere. HealthKit data is processed locally and stored only in the app's private container (Documents folder). It is never transmitted to any server, third party, or analytics service.</li>
-    <li><strong>We do not write to HealthKit.</strong> OPUS is read-only.</li>
-</ul>
+            <h2>4. Veri Depolama ve Güvenlik</h2>
+            <ul><li>Tüm veriler yalnızca cihazınızda işlenir ve saklanır</li><li>iCloud senkronizasyonu isteğe bağlıdır ve tamamen kullanıcı kontrolündedir</li><li>iCloud kullanılsa bile veriler Apple'ın şifreleme altyapısıyla korunur</li><li>Hiçbir veri üçüncü taraf sunuculara gönderilmez</li><li>Cilt tarama fotoğrafları cihaz üzerinde şifreli olarak saklanır</li></ul>
 
-<h3>Camera / Photos</h3>
-<ul>
-    <li><strong>What we capture:</strong> A single front-camera photo per scan session.</li>
-    <li><strong>Purpose:</strong> On-device skin analysis using Apple's Vision framework and Core Image. The analysis runs in memory and produces a score. The photo (if saved) is stored as a JPEG in your device's Documents folder under a date-keyed filename.</li>
-    <li><strong>Where it goes:</strong> Nowhere. Photos are never uploaded, shared, or accessible outside the OPUS app sandbox.</li>
-    <li><strong>Deletion:</strong> Photos are deleted when you use "Delete All Data" in Settings, or when you delete the app.</li>
-</ul>
+            <h2>5. Üçüncü Taraf Paylaşımı</h2>
+            <ul><li>Reklam ağlarına veri aktarılmaz</li><li>Analitik servislerine kişisel sağlık verisi gönderilmez</li><li>Veri satışı veya ticareti yapılmaz</li><li>HealthKit verileri Apple kurallarına uygun olarak korunur</li></ul>
 
-<h3>iCloud Sync (Optional)</h3>
-<ul>
-    <li><strong>What we sync:</strong> If you are signed into iCloud, daily health vectors and your profile preferences are optionally synced to your iCloud private database (CloudKit).</li>
-    <li><strong>Who can access it:</strong> Only you. CloudKit private databases are end-to-end encrypted by Apple and are not accessible to us, Apple employees, or any third party.</li>
-    <li><strong>How to disable:</strong> Sign out of iCloud, or use "Delete All Data" in Settings to remove all CloudKit records.</li>
-</ul>
+            <h2>6. Reklam</h2>
+            <p>OPUS reklam içermez ve reklam amacıyla veri toplamaz.</p>
 
-<h3>Notifications</h3>
-<ul>
-    <li>OPUS uses local notifications (scheduled on your device) for morning briefs and weekly reports.</li>
-    <li>No push notification servers are involved. No notification tokens are collected or transmitted.</li>
-</ul>
+            <h2>7. Kullanıcı Hakları</h2>
+            <ul><li><strong>Veri silme:</strong> Ayarlar &gt; Tüm Verileri Sil ile tüm verilerinizi kalıcı olarak silebilirsiniz</li><li><strong>İzin yönetimi:</strong> iOS Ayarlar üzerinden HealthKit ve kamera izinlerini istediğiniz zaman açıp kapatabilirsiniz</li><li><strong>Abonelik yönetimi:</strong> Apple Ayarlar &gt; Abonelikler üzerinden yönetilir</li></ul>
 
-<h3>UserDefaults / Local Storage</h3>
-<ul>
-    <li>OPUS stores app preferences (notification settings, units, streak count) in your device's local UserDefaults.</li>
-    <li>Shared app group UserDefaults (group.com.opus.bio) are used only for widget data display on your Home Screen.</li>
-</ul>
+            <h2>8. Çocukların Gizliliği</h2>
+            <p>OPUS 17 yaş altı kullanıcılara yönelik değildir. Bilerek 17 yaş altı kullanıcılardan veri toplamayız.</p>
 
-<h2>3. What we do NOT do</h2>
-<ul>
-    <li>We do not collect analytics or usage data.</li>
-    <li>We do not use advertising SDKs or ad networks.</li>
-    <li>We do not use tracking pixels, fingerprinting, or device identifiers.</li>
-    <li>We do not sell, rent, or share your data with any third party.</li>
-    <li>We do not use third-party crash reporting or performance monitoring tools.</li>
-    <li>We do not require account creation.</li>
-    <li>We do not require an internet connection for core functionality.</li>
-</ul>
+            <h2>9. Değişiklikler</h2>
+            <p>Bu gizlilik politikası güncellenebilir. Önemli değişiklikler uygulama içinden bildirilecektir.</p>
 
-<h2>4. In-App Purchases (StoreKit 2)</h2>
-<p>Subscriptions are managed entirely through Apple's App Store and StoreKit 2. We do not see or store your payment information. Apple processes all transactions. Refer to Apple's Privacy Policy (<a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>) for purchase data handling.</p>
+            <h2>10. İletişim</h2>
+            <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+        </div>
 
-<h2>5. Children's Privacy</h2>
-<p>OPUS is not directed at children under 13. We do not knowingly collect any information from children. If you believe a child has provided health data through this app, please contact us so we can assist with deletion.</p>
+        <!-- ═══ ENGLISH ═══ -->
+        <div id="en" class="section">
+            <p><strong>Last updated:</strong> February 24, 2026</p>
 
-<h2>6. Data Retention & Deletion</h2>
-<p>All data is stored locally on your device or in your personal iCloud account. You have full control:</p>
-<ul>
-    <li><strong>Delete All Data</strong> (Settings → Data & Privacy): Clears all local files, photos, CloudKit records, and UserDefaults. Returns app to first-launch state.</li>
-    <li><strong>Delete App</strong>: Removes all local data automatically. Note: iCloud data persists until cleared via Settings or iCloud.com → Manage Storage.</li>
-</ul>
+            <h2>1. Overview</h2>
+            <p>OPUS is an iOS application that tracks your biological signals and provides personalized health insights. Your privacy is our highest priority.</p>
+            <div class="highlight"><strong>Our core principle:</strong> All your data stays on your device. No personal health data is ever sent to external servers.</div>
 
-<h2>7. Security</h2>
-<p>All local files are stored in the app's sandboxed Documents directory, protected by iOS file-system encryption (hardware-level). iCloud data is encrypted in transit and at rest by Apple. We do not implement custom encryption (ITSAppUsesNonExemptEncryption: NO).</p>
+            <h2>2. Data We Collect</h2>
+            <p><strong>a) Apple Health (HealthKit) Data</strong></p>
+            <ul><li>Sleep duration and sleep stages</li><li>Heart rate variability (HRV)</li><li>Resting heart rate</li><li>Blood oxygen saturation (SpO2)</li><li>Daily step count and activity data</li></ul>
+            <p><strong>b) Camera Data</strong></p>
+            <ul><li>Skin scan photos (via front camera)</li><li>Photos are encrypted and stored only on your device</li></ul>
+            <p><strong>c) Manually Entered Data</strong></p>
+            <ul><li>Caffeine intake</li><li>Alcohol intake</li><li>Water intake (hydration)</li><li>Profile information (name, age, gender — optional)</li><li>Menstrual cycle tracking (optional)</li></ul>
 
-<h2>8. Changes to This Policy</h2>
-<p>We may update this policy as the app evolves. The effective date above reflects the latest revision. Continued use of the app constitutes acceptance of the updated policy.</p>
+            <h2>3. How We Use Your Data</h2>
+            <ul><li>Calculating your personal biological baseline</li><li>Determining daily mode (Rest / Steady / Thrive)</li><li>Correlation and pattern analysis</li><li>Personalized insights and recommendations</li></ul>
+            <div class="highlight">OPUS is a health tracking application, not a medical device. Information provided does not replace medical diagnosis, evaluation, or treatment.</div>
 
-<h2>9. Contact</h2>
-<p>Questions or data requests: <a href="mailto:privacy@opus-app.com">privacy@opus-app.com</a><br>
-Support: <a href="https://opus-app.com/support">opus-app.com/support</a></p>
+            <h2>4. Data Storage and Security</h2>
+            <ul><li>All data is processed and stored exclusively on your device</li><li>iCloud synchronization is optional and entirely under your control</li><li>When iCloud is used, data is protected by Apple's encryption infrastructure</li><li>No data is sent to third-party servers</li><li>Skin scan photos are stored encrypted on device</li></ul>
 
-<h2>10. Medical Disclaimer</h2>
-<p>OPUS is not a medical device and is not intended to diagnose, treat, cure, or prevent any disease or health condition. Information provided is for personal observation and general wellness purposes only. It does not constitute medical advice and should not replace consultation with a qualified healthcare professional.</p>
+            <h2>5. Third-Party Sharing</h2>
+            <ul><li>No data is transmitted to advertising networks</li><li>No personal health data is sent to analytics services</li><li>No data is sold or traded</li><li>HealthKit data is protected in compliance with Apple's guidelines</li></ul>
 
-<hr class="lang-divider">
+            <h2>6. Advertising</h2>
+            <p>OPUS does not contain advertising and does not collect data for advertising purposes.</p>
 
-<!-- ═══════════════════════════════════════════════════ TURKISH ═══ -->
-<h1>OPUS</h1>
-<p class="subtitle">Gizlilik Politikası</p>
+            <h2>7. Your Rights</h2>
+            <ul><li><strong>Data deletion:</strong> Permanently delete all your data via Settings &gt; Delete All Data</li><li><strong>Permission management:</strong> Enable or disable HealthKit and camera permissions at any time through iOS Settings</li><li><strong>Subscription management:</strong> Managed through Apple Settings &gt; Subscriptions</li></ul>
 
-<div class="highlight-box">
-    <p><strong>Kısa versiyon:</strong> Sağlık verileriniz cihazınızda kalır. Hiçbir şey toplamıyoruz. Hiçbir şey satmıyoruz. Takip etmiyoruz.</p>
-</div>
+            <h2>8. Children's Privacy</h2>
+            <p>OPUS is not intended for users under the age of 17. We do not knowingly collect data from users under 17.</p>
 
-<p class="effective-date">Yürürlük tarihi: 2025-01-01 · Son güncelleme: 2025-01-01</p>
+            <h2>9. Changes</h2>
+            <p>This privacy policy may be updated. Significant changes will be communicated through the application.</p>
 
-<h2>1. Biz kimiz?</h2>
-<p>OPUS ("uygulama", "biz"), iOS için kişisel bir biyolojik zeka uygulamasıdır. Kişisel verilerinizi alan sunuculara sahip değiliz. Bir veri aracısı, reklam platformu veya sağlık hizmetleri sağlayıcısı değiliz.</p>
+            <h2>10. Contact</h2>
+            <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+        </div>
 
-<h2>2. Hangi verilere erişiyoruz ve nasıl kullanıyoruz?</h2>
+        <!-- ═══ DEUTSCH ═══ -->
+        <div id="de" class="section">
+            <p><strong>Letzte Aktualisierung:</strong> 24. Februar 2026</p>
 
-<h3>HealthKit Verileri</h3>
-<ul>
-    <li><strong>Okuduğumuz veriler:</strong> Uyku analizi, kalp ritim değişkenliği (HRV), dinlenme nabzı, adım sayısı, aktif enerji ve antrenman özetleri.</li>
-    <li><strong>Amaç:</strong> Günlük biyolojik skorunuzu, modunuzu ve trend analizinizi tamamen cihazınızda hesaplamak.</li>
-    <li><strong>Nereye gidiyor:</strong> Hiçbir yere. HealthKit verileri yerel olarak işlenir ve yalnızca uygulamanın özel alanında (Documents klasöründe) depolanır. Herhangi bir sunucuya, üçüncü tarafa veya analiz servisine iletilmez.</li>
-    <li><strong>HealthKit'e yazmıyoruz.</strong> OPUS yalnızca okuma modundadır.</li>
-</ul>
+            <h2>1. Überblick</h2>
+            <p>OPUS ist eine iOS-Anwendung, die Ihre biologischen Signale verfolgt und personalisierte Gesundheitseinblicke bietet. Ihre Privatsphäre hat für uns höchste Priorität.</p>
+            <div class="highlight"><strong>Unser Grundprinzip:</strong> Alle Ihre Daten bleiben auf Ihrem Gerät. Keine persönlichen Gesundheitsdaten werden jemals an externe Server gesendet.</div>
 
-<h3>Kamera / Fotoğraflar</h3>
-<ul>
-    <li><strong>Ne kaydediyoruz:</strong> Her tarama oturumu için tek bir ön kamera fotoğrafı.</li>
-    <li><strong>Amaç:</strong> Apple'ın Vision çerçevesi ve Core Image kullanarak cihaz üzerinde cilt analizi. Analiz bellekte çalışır ve bir skor üretir. Fotoğraf (kaydedilirse) cihazınızın Documents klasöründe tarih anahtarlı bir JPEG olarak saklanır.</li>
-    <li><strong>Nereye gidiyor:</strong> Hiçbir yere. Fotoğraflar hiçbir zaman yüklenmez, paylaşılmaz veya OPUS uygulama korumalı alanının dışından erişilemez.</li>
-</ul>
+            <h2>2. Erhobene Daten</h2>
+            <p><strong>a) Apple Health (HealthKit) Daten</strong></p>
+            <ul><li>Schlafdauer und Schlafphasen</li><li>Herzfrequenzvariabilität (HRV)</li><li>Ruheherzfrequenz</li><li>Blutsauerstoffsättigung (SpO2)</li><li>Tägliche Schrittzahl und Aktivitätsdaten</li></ul>
+            <p><strong>b) Kameradaten</strong></p>
+            <ul><li>Hautanalyse-Fotos (über die Frontkamera)</li><li>Fotos werden verschlüsselt und ausschließlich auf Ihrem Gerät gespeichert</li></ul>
+            <p><strong>c) Manuell eingegebene Daten</strong></p>
+            <ul><li>Koffeinkonsum</li><li>Alkoholkonsum</li><li>Wasseraufnahme (Hydration)</li><li>Profilinformationen (Name, Alter, Geschlecht — optional)</li><li>Menstruationszyklus-Tracking (optional)</li></ul>
 
-<h3>iCloud Senkronizasyonu (İsteğe Bağlı)</h3>
-<ul>
-    <li><strong>Ne senkronize ediyoruz:</strong> iCloud'a giriş yaptıysanız, günlük sağlık vektörleri ve profil tercihleriniz isteğe bağlı olarak özel iCloud veritabanınıza (CloudKit) senkronize edilir.</li>
-    <li><strong>Kim erişebilir:</strong> Yalnızca siz. CloudKit özel veritabanları Apple tarafından uçtan uca şifrelenir ve bize, Apple çalışanlarına veya herhangi bir üçüncü tarafa erişilemez.</li>
-</ul>
+            <h2>3. Verwendungszweck der Daten</h2>
+            <ul><li>Berechnung Ihrer persönlichen biologischen Baseline</li><li>Bestimmung des täglichen Modus (Ruhe / Stabil / Antrieb)</li><li>Korrelations- und Musteranalyse</li><li>Personalisierte Einblicke und Empfehlungen</li></ul>
+            <div class="highlight">OPUS ist eine Gesundheits-Tracking-Anwendung und kein Medizinprodukt. Die bereitgestellten Informationen ersetzen keine medizinische Diagnose, Bewertung oder Behandlung.</div>
 
-<h2>3. Yapmadıklarımız</h2>
-<ul>
-    <li>Analitik veya kullanım verisi toplamıyoruz.</li>
-    <li>Reklam SDK'ları veya reklam ağları kullanmıyoruz.</li>
-    <li>Verilerinizi üçüncü taraflarla satmıyor, kiralamıyor veya paylaşmıyoruz.</li>
-    <li>Hesap oluşturma gerektirmiyoruz.</li>
-    <li>Temel işlevler için internet bağlantısı gerektirmiyoruz.</li>
-</ul>
+            <h2>4. Datenspeicherung und Sicherheit</h2>
+            <ul><li>Alle Daten werden ausschließlich auf Ihrem Gerät verarbeitet und gespeichert</li><li>Die iCloud-Synchronisierung ist optional und liegt vollständig unter Ihrer Kontrolle</li><li>Bei Nutzung von iCloud werden die Daten durch Apples Verschlüsselungsinfrastruktur geschützt</li><li>Keine Daten werden an Drittanbieter-Server gesendet</li><li>Hautanalyse-Fotos werden verschlüsselt auf dem Gerät gespeichert</li></ul>
 
-<h2>4. Veri Silme</h2>
-<p>Tüm veriler cihazınızda veya kişisel iCloud hesabınızda yerel olarak saklanır. Tam kontrolünüz sizde:</p>
-<ul>
-    <li><strong>Tüm Verileri Sil</strong> (Ayarlar → Veri ve Gizlilik): Tüm yerel dosyaları, fotoğrafları, CloudKit kayıtlarını ve UserDefaults'u temizler.</li>
-    <li><strong>Uygulamayı Sil:</strong> Tüm yerel verileri otomatik olarak kaldırır.</li>
-</ul>
+            <h2>5. Weitergabe an Dritte</h2>
+            <ul><li>Keine Datenübertragung an Werbenetzwerke</li><li>Keine persönlichen Gesundheitsdaten an Analysedienste</li><li>Kein Verkauf oder Handel mit Daten</li><li>HealthKit-Daten werden gemäß den Apple-Richtlinien geschützt</li></ul>
 
-<h2>5. Tıbbi Sorumluluk Reddi</h2>
-<p>OPUS tıbbi bir cihaz değildir ve herhangi bir hastalık veya sağlık durumunu teşhis etmek, tedavi etmek, iyileştirmek veya önlemek amacıyla kullanılamaz. Sağlanan bilgiler yalnızca kişisel gözlem ve genel iyilik amacıyla sunulmaktadır. Tıbbi tavsiye niteliği taşımaz ve nitelikli bir sağlık uzmanıyla yapılacak konsültasyonun yerini tutmaz.</p>
+            <h2>6. Werbung</h2>
+            <p>OPUS enthält keine Werbung und erhebt keine Daten zu Werbezwecken.</p>
 
-<h2>6. İletişim</h2>
-<p>Sorular veya veri talepleri için: <a href="mailto:privacy@opus-app.com">privacy@opus-app.com</a><br>
-Destek: <a href="https://opus-app.com/support">opus-app.com/support</a></p>
+            <h2>7. Ihre Rechte</h2>
+            <ul><li><strong>Datenlöschung:</strong> Löschen Sie alle Daten dauerhaft über Einstellungen &gt; Alle Daten löschen</li><li><strong>Berechtigungsverwaltung:</strong> Aktivieren oder deaktivieren Sie HealthKit- und Kameraberechtigungen jederzeit über die iOS-Einstellungen</li><li><strong>Abonnementverwaltung:</strong> Über Apple Einstellungen &gt; Abonnements verwaltet</li></ul>
 
+            <h2>8. Datenschutz für Kinder</h2>
+            <p>OPUS richtet sich nicht an Nutzer unter 17 Jahren. Wir erheben wissentlich keine Daten von Nutzern unter 17 Jahren.</p>
+
+            <h2>9. Änderungen</h2>
+            <p>Diese Datenschutzrichtlinie kann aktualisiert werden. Wesentliche Änderungen werden über die Anwendung mitgeteilt.</p>
+
+            <h2>10. Kontakt</h2>
+            <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+        </div>
+
+        <!-- ═══ FRANÇAIS ═══ -->
+        <div id="fr" class="section">
+            <p><strong>Dernière mise à jour :</strong> 24 février 2026</p>
+
+            <h2>1. Aperçu</h2>
+            <p>OPUS est une application iOS qui suit vos signaux biologiques et fournit des informations de santé personnalisées. Votre vie privée est notre priorité absolue.</p>
+            <div class="highlight"><strong>Notre principe fondamental :</strong> Toutes vos données restent sur votre appareil. Aucune donnée de santé personnelle n'est jamais envoyée vers des serveurs externes.</div>
+
+            <h2>2. Données collectées</h2>
+            <p><strong>a) Données Apple Santé (HealthKit)</strong></p>
+            <ul><li>Durée et phases du sommeil</li><li>Variabilité de la fréquence cardiaque (VFC)</li><li>Fréquence cardiaque au repos</li><li>Saturation en oxygène du sang (SpO2)</li><li>Nombre de pas quotidien et données d'activité</li></ul>
+            <p><strong>b) Données de la caméra</strong></p>
+            <ul><li>Photos d'analyse cutanée (via la caméra frontale)</li><li>Les photos sont cryptées et stockées uniquement sur votre appareil</li></ul>
+            <p><strong>c) Données saisies manuellement</strong></p>
+            <ul><li>Consommation de caféine</li><li>Consommation d'alcool</li><li>Consommation d'eau (hydratation)</li><li>Informations de profil (nom, âge, sexe — facultatif)</li><li>Suivi du cycle menstruel (facultatif)</li></ul>
+
+            <h2>3. Utilisation des données</h2>
+            <ul><li>Calcul de votre référence biologique personnelle</li><li>Détermination du mode quotidien (Repos / Stable / Élan)</li><li>Analyse de corrélations et de tendances</li><li>Informations et recommandations personnalisées</li></ul>
+            <div class="highlight">OPUS est une application de suivi de santé, pas un dispositif médical. Les informations fournies ne remplacent pas un diagnostic, une évaluation ou un traitement médical.</div>
+
+            <h2>4. Stockage et sécurité des données</h2>
+            <ul><li>Toutes les données sont traitées et stockées exclusivement sur votre appareil</li><li>La synchronisation iCloud est facultative et entièrement sous votre contrôle</li><li>En cas d'utilisation d'iCloud, les données sont protégées par l'infrastructure de chiffrement d'Apple</li><li>Aucune donnée n'est envoyée à des serveurs tiers</li><li>Les photos d'analyse cutanée sont stockées de manière cryptée sur l'appareil</li></ul>
+
+            <h2>5. Partage avec des tiers</h2>
+            <ul><li>Aucune donnée transmise aux réseaux publicitaires</li><li>Aucune donnée de santé personnelle envoyée aux services d'analyse</li><li>Aucune vente ou échange de données</li><li>Les données HealthKit sont protégées conformément aux directives d'Apple</li></ul>
+
+            <h2>6. Publicité</h2>
+            <p>OPUS ne contient pas de publicité et ne collecte pas de données à des fins publicitaires.</p>
+
+            <h2>7. Vos droits</h2>
+            <ul><li><strong>Suppression des données :</strong> Supprimez définitivement toutes vos données via Réglages &gt; Supprimer toutes les données</li><li><strong>Gestion des autorisations :</strong> Activez ou désactivez les autorisations HealthKit et caméra à tout moment via les Réglages iOS</li><li><strong>Gestion de l'abonnement :</strong> Gérée via Réglages Apple &gt; Abonnements</li></ul>
+
+            <h2>8. Confidentialité des enfants</h2>
+            <p>OPUS ne s'adresse pas aux utilisateurs de moins de 17 ans. Nous ne collectons pas sciemment les données d'utilisateurs de moins de 17 ans.</p>
+
+            <h2>9. Modifications</h2>
+            <p>Cette politique de confidentialité peut être mise à jour. Les modifications importantes seront communiquées via l'application.</p>
+
+            <h2>10. Contact</h2>
+            <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+        </div>
+
+        <!-- ═══ ESPAÑOL ═══ -->
+        <div id="es" class="section">
+            <p><strong>Última actualización:</strong> 24 de febrero de 2026</p>
+
+            <h2>1. Descripción general</h2>
+            <p>OPUS es una aplicación iOS que rastrea tus señales biológicas y proporciona información de salud personalizada. Tu privacidad es nuestra máxima prioridad.</p>
+            <div class="highlight"><strong>Nuestro principio fundamental:</strong> Todos tus datos permanecen en tu dispositivo. Ningún dato de salud personal se envía jamás a servidores externos.</div>
+
+            <h2>2. Datos que recopilamos</h2>
+            <p><strong>a) Datos de Apple Salud (HealthKit)</strong></p>
+            <ul><li>Duración y fases del sueño</li><li>Variabilidad de la frecuencia cardíaca (VFC)</li><li>Frecuencia cardíaca en reposo</li><li>Saturación de oxígeno en sangre (SpO2)</li><li>Conteo diario de pasos y datos de actividad</li></ul>
+            <p><strong>b) Datos de la cámara</strong></p>
+            <ul><li>Fotos de análisis de piel (mediante la cámara frontal)</li><li>Las fotos se cifran y almacenan únicamente en tu dispositivo</li></ul>
+            <p><strong>c) Datos ingresados manualmente</strong></p>
+            <ul><li>Consumo de cafeína</li><li>Consumo de alcohol</li><li>Consumo de agua (hidratación)</li><li>Información de perfil (nombre, edad, género — opcional)</li><li>Seguimiento del ciclo menstrual (opcional)</li></ul>
+
+            <h2>3. Cómo usamos tus datos</h2>
+            <ul><li>Calcular tu línea base biológica personal</li><li>Determinar el modo diario (Descanso / Estable / Impulso)</li><li>Análisis de correlación y patrones</li><li>Información y recomendaciones personalizadas</li></ul>
+            <div class="highlight">OPUS es una aplicación de seguimiento de salud, no un dispositivo médico. La información proporcionada no reemplaza el diagnóstico, la evaluación ni el tratamiento médico.</div>
+
+            <h2>4. Almacenamiento y seguridad de datos</h2>
+            <ul><li>Todos los datos se procesan y almacenan exclusivamente en tu dispositivo</li><li>La sincronización con iCloud es opcional y está completamente bajo tu control</li><li>Cuando se usa iCloud, los datos están protegidos por la infraestructura de cifrado de Apple</li><li>No se envían datos a servidores de terceros</li><li>Las fotos de análisis de piel se almacenan cifradas en el dispositivo</li></ul>
+
+            <h2>5. Compartición con terceros</h2>
+            <ul><li>No se transmiten datos a redes publicitarias</li><li>No se envían datos de salud personal a servicios de análisis</li><li>No se venden ni intercambian datos</li><li>Los datos de HealthKit están protegidos de acuerdo con las directrices de Apple</li></ul>
+
+            <h2>6. Publicidad</h2>
+            <p>OPUS no contiene publicidad y no recopila datos con fines publicitarios.</p>
+
+            <h2>7. Tus derechos</h2>
+            <ul><li><strong>Eliminación de datos:</strong> Elimina permanentemente todos tus datos a través de Ajustes &gt; Eliminar todos los datos</li><li><strong>Gestión de permisos:</strong> Activa o desactiva los permisos de HealthKit y cámara en cualquier momento a través de los Ajustes de iOS</li><li><strong>Gestión de suscripción:</strong> Se gestiona a través de Ajustes de Apple &gt; Suscripciones</li></ul>
+
+            <h2>8. Privacidad de los menores</h2>
+            <p>OPUS no está destinado a usuarios menores de 17 años. No recopilamos conscientemente datos de usuarios menores de 17 años.</p>
+
+            <h2>9. Cambios</h2>
+            <p>Esta política de privacidad puede actualizarse. Los cambios importantes se comunicarán a través de la aplicación.</p>
+
+            <h2>10. Contacto</h2>
+            <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+        </div>
+
+        <!-- ═══ 日本語 ═══ -->
+        <div id="ja" class="section">
+            <p><strong>最終更新日：</strong>2026年2月24日</p>
+
+            <h2>1. 概要</h2>
+            <p>OPUSは、生体シグナルを追跡し、パーソナライズされた健康インサイトを提供するiOSアプリケーションです。お客様のプライバシーは私たちの最優先事項です。</p>
+            <div class="highlight"><strong>基本理念：</strong>すべてのデータはお使いのデバイスに保存されます。個人の健康データが外部サーバーに送信されることは一切ありません。</div>
+
+            <h2>2. 収集するデータ</h2>
+            <p><strong>a) Apple ヘルスケア（HealthKit）データ</strong></p>
+            <ul><li>睡眠時間と睡眠ステージ</li><li>心拍変動（HRV）</li><li>安静時心拍数</li><li>血中酸素飽和度（SpO2）</li><li>1日の歩数とアクティビティデータ</li></ul>
+            <p><strong>b) カメラデータ</strong></p>
+            <ul><li>肌スキャン写真（フロントカメラ使用）</li><li>写真は暗号化され、デバイス上にのみ保存されます</li></ul>
+            <p><strong>c) 手動入力データ</strong></p>
+            <ul><li>カフェイン摂取量</li><li>アルコール摂取量</li><li>水分摂取量（水分補給）</li><li>プロフィール情報（名前、年齢、性別 — 任意）</li><li>月経周期トラッキング（任意）</li></ul>
+
+            <h2>3. データの利用目的</h2>
+            <ul><li>個人の生体ベースラインの算出</li><li>日々のモード判定（リカバー / ステディ / スライブ）</li><li>相関関係とパターン分析</li><li>パーソナライズされたインサイトと提案</li></ul>
+            <div class="highlight">OPUSは健康トラッキングアプリケーションであり、医療機器ではありません。提供される情報は、医療診断、評価、治療の代替となるものではありません。</div>
+
+            <h2>4. データの保存とセキュリティ</h2>
+            <ul><li>すべてのデータはお使いのデバイス上でのみ処理・保存されます</li><li>iCloud同期はオプションであり、完全にユーザーの管理下にあります</li><li>iCloudを使用する場合、データはAppleの暗号化インフラで保護されます</li><li>第三者のサーバーにデータが送信されることはありません</li><li>肌スキャン写真はデバイス上で暗号化して保存されます</li></ul>
+
+            <h2>5. 第三者への共有</h2>
+            <ul><li>広告ネットワークへのデータ送信なし</li><li>分析サービスへの個人健康データの送信なし</li><li>データの売買・取引なし</li><li>HealthKitデータはAppleのガイドラインに準拠して保護されます</li></ul>
+
+            <h2>6. 広告</h2>
+            <p>OPUSには広告は含まれておらず、広告目的でデータを収集することはありません。</p>
+
+            <h2>7. ユーザーの権利</h2>
+            <ul><li><strong>データの削除：</strong>設定 &gt; すべてのデータを削除から、すべてのデータを永久に削除できます</li><li><strong>権限の管理：</strong>iOS設定からHealthKitおよびカメラの権限をいつでも有効・無効にできます</li><li><strong>サブスクリプションの管理：</strong>Apple設定 &gt; サブスクリプションから管理されます</li></ul>
+
+            <h2>8. 子どものプライバシー</h2>
+            <p>OPUSは17歳未満のユーザーを対象としていません。17歳未満のユーザーから意図的にデータを収集することはありません。</p>
+
+            <h2>9. 変更</h2>
+            <p>このプライバシーポリシーは更新される場合があります。重要な変更はアプリケーションを通じてお知らせします。</p>
+
+            <h2>10. お問い合わせ</h2>
+            <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+        </div>
+
+        <!-- ═══ 한국어 ═══ -->
+        <div id="ko" class="section">
+            <p><strong>최종 업데이트:</strong> 2026년 2월 24일</p>
+
+            <h2>1. 개요</h2>
+            <p>OPUS는 생체 신호를 추적하고 개인 맞춤 건강 인사이트를 제공하는 iOS 애플리케이션입니다. 귀하의 개인정보 보호는 저희의 최우선 과제입니다.</p>
+            <div class="highlight"><strong>핵심 원칙:</strong> 모든 데이터는 귀하의 기기에 저장됩니다. 개인 건강 데이터가 외부 서버로 전송되는 일은 절대 없습니다.</div>
+
+            <h2>2. 수집하는 데이터</h2>
+            <p><strong>a) Apple 건강(HealthKit) 데이터</strong></p>
+            <ul><li>수면 시간 및 수면 단계</li><li>심박변이도(HRV)</li><li>안정 시 심박수</li><li>혈중 산소 포화도(SpO2)</li><li>일일 걸음 수 및 활동 데이터</li></ul>
+            <p><strong>b) 카메라 데이터</strong></p>
+            <ul><li>피부 스캔 사진 (전면 카메라 사용)</li><li>사진은 암호화되어 기기에만 저장됩니다</li></ul>
+            <p><strong>c) 수동 입력 데이터</strong></p>
+            <ul><li>카페인 섭취량</li><li>알코올 섭취량</li><li>수분 섭취량 (수분 보충)</li><li>프로필 정보 (이름, 나이, 성별 — 선택 사항)</li><li>생리 주기 추적 (선택 사항)</li></ul>
+
+            <h2>3. 데이터 사용 목적</h2>
+            <ul><li>개인 생체 기준선(베이스라인) 계산</li><li>일일 모드 결정 (회복 / 안정 / 활력)</li><li>상관관계 및 패턴 분석</li><li>맞춤형 인사이트 및 추천</li></ul>
+            <div class="highlight">OPUS는 건강 추적 애플리케이션이며 의료 기기가 아닙니다. 제공되는 정보는 의료 진단, 평가 또는 치료를 대체하지 않습니다.</div>
+
+            <h2>4. 데이터 저장 및 보안</h2>
+            <ul><li>모든 데이터는 귀하의 기기에서만 처리 및 저장됩니다</li><li>iCloud 동기화는 선택 사항이며 전적으로 사용자가 관리합니다</li><li>iCloud 사용 시 데이터는 Apple의 암호화 인프라로 보호됩니다</li><li>제3자 서버로 데이터가 전송되지 않습니다</li><li>피부 스캔 사진은 기기에서 암호화되어 저장됩니다</li></ul>
+
+            <h2>5. 제3자 공유</h2>
+            <ul><li>광고 네트워크로의 데이터 전송 없음</li><li>분석 서비스로의 개인 건강 데이터 전송 없음</li><li>데이터 판매 또는 거래 없음</li><li>HealthKit 데이터는 Apple 가이드라인에 따라 보호됩니다</li></ul>
+
+            <h2>6. 광고</h2>
+            <p>OPUS는 광고를 포함하지 않으며 광고 목적으로 데이터를 수집하지 않습니다.</p>
+
+            <h2>7. 사용자 권리</h2>
+            <ul><li><strong>데이터 삭제:</strong> 설정 &gt; 모든 데이터 삭제를 통해 모든 데이터를 영구적으로 삭제할 수 있습니다</li><li><strong>권한 관리:</strong> iOS 설정을 통해 언제든지 HealthKit 및 카메라 권한을 활성화 또는 비활성화할 수 있습니다</li><li><strong>구독 관리:</strong> Apple 설정 &gt; 구독에서 관리됩니다</li></ul>
+
+            <h2>8. 아동 개인정보 보호</h2>
+            <p>OPUS는 17세 미만 사용자를 대상으로 하지 않습니다. 17세 미만 사용자의 데이터를 의도적으로 수집하지 않습니다.</p>
+
+            <h2>9. 변경 사항</h2>
+            <p>이 개인정보 보호정책은 업데이트될 수 있습니다. 중요한 변경 사항은 애플리케이션을 통해 안내됩니다.</p>
+
+            <h2>10. 문의</h2>
+            <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 OPUS. All rights reserved.</p>
+            <p>Effective date: February 24, 2026</p>
+        </div>
+    </div>
+
+    <script>
+        function showLang(lang, btn) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
 </body>
 </html>
