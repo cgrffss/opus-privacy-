@@ -98,7 +98,7 @@
 
         <!-- ═══ ENGLISH ═══ -->
         <div id="en" class="section active">
-            <p><strong>Last updated:</strong> March 9, 2026</p>
+            <p><strong>Last updated:</strong> March 14, 2026</p>
 
             <h2>1. Overview</h2>
             <p>OPUS is an iOS application that tracks your biological signals and provides personalized health insights. Your privacy is our highest priority.</p>
@@ -112,16 +112,33 @@
             <p><strong>c) Manually Entered Data</strong></p>
             <ul><li>Caffeine intake</li><li>Alcohol intake</li><li>Water intake (hydration)</li><li>Profile information (name, age, gender — optional)</li><li>Menstrual cycle tracking (optional)</li></ul>
 
-            <h2>3. Cloud Analysis (OPUS Pro)</h2>
-            <p>OPUS Pro subscribers may use the Cloud Skin Analysis feature. When you use this feature:</p>
+            <h2>3. Cloud Analysis (OPUS Pro) — Third-Party AI Service</h2>
+            <p>When you subscribe to OPUS Pro, you may opt in to cloud-based skin analysis. Before any data is sent, the app will ask for your explicit consent.</p>
+            <p><strong>Data we send:</strong></p>
             <ul>
-                <li>Your skin scan photos are securely transmitted to our backend server hosted on <strong>Railway</strong> (railway.com)</li>
-                <li>Our server sends the images to the <strong>OpenAI API (GPT-4o)</strong> for AI-powered skin analysis</li>
-                <li>The analysis results are returned to your device</li>
-                <li>Photos sent for cloud analysis are processed in real time and are <strong>not permanently stored</strong> on our servers or OpenAI's servers</li>
-                <li>OpenAI processes the data in accordance with their <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">API data usage policy</a> — API data is not used to train their models</li>
+                <li>Your compressed skin scan photo (no name, email, or personal identifiers attached)</li>
+                <li>Basic device context (lighting score, scan count)</li>
             </ul>
-            <div class="highlight"><strong>You are always in control:</strong> Cloud Analysis is an opt-in feature. You can use OPUS without ever sending photos to the cloud. On-device analysis remains available for all users.</div>
+            <p><strong>Who processes your data:</strong></p>
+            <ul>
+                <li><strong>OPUS servers hosted on Railway</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — receives and routes your scan</li>
+                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — processes the image using GPT-4o vision AI model</li>
+            </ul>
+            <p><strong>How your data is handled:</strong></p>
+            <ul>
+                <li>Your photo is sent via encrypted HTTPS connection</li>
+                <li>OpenAI processes the image and returns analysis results</li>
+                <li>Per <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">OpenAI's API data usage policy</a>, API inputs are <strong>NOT</strong> used for training</li>
+                <li>Your photo is <strong>NOT stored</strong> on our servers or by OpenAI after processing</li>
+                <li>Only the text analysis results are returned to your device</li>
+            </ul>
+            <p><strong>Your control:</strong></p>
+            <ul>
+                <li>Cloud analysis requires your explicit opt-in consent</li>
+                <li>You can revoke consent at any time in Settings &gt; AI Data Usage</li>
+                <li>Without consent, all analysis runs on-device only (no data leaves your phone)</li>
+                <li>Free users never send data to cloud — analysis is always on-device</li>
+            </ul>
 
             <h2>4. Data Synchronization</h2>
             <p>OPUS uses <strong>Supabase</strong> (supabase.com) for optional cloud synchronization:</p>
@@ -150,9 +167,9 @@
             <h2>7. Third-Party Services</h2>
             <p>OPUS integrates with the following third-party services:</p>
             <ul>
-                <li><strong>OpenAI API (GPT-4o):</strong> Used for OPUS Pro Cloud Skin Analysis. Photos are sent via our backend for AI analysis. OpenAI does not use API data to train models</li>
+                <li><strong>OpenAI API (GPT-4o):</strong> Used for OPUS Pro Cloud Skin Analysis. Your skin scan photo is sent via our backend to OpenAI for AI-powered analysis. OpenAI does not store your photo and does not use API data to train models. See Section 3 for full details</li>
+                <li><strong>Railway:</strong> Hosts our backend server (<a href="https://railway.app" target="_blank">railway.app</a>) that receives and routes Cloud Analysis requests to OpenAI. Photos are not stored on Railway</li>
                 <li><strong>Supabase:</strong> Used for optional account and data synchronization. Hosted on AWS infrastructure</li>
-                <li><strong>Railway:</strong> Hosts our backend server that processes Cloud Analysis requests</li>
                 <li><strong>Apple HealthKit:</strong> Data is protected in compliance with Apple's guidelines</li>
             </ul>
             <p>We do not:</p>
@@ -185,7 +202,7 @@
 
         <!-- ═══ DEUTSCH ═══ -->
         <div id="de" class="section">
-            <p><strong>Letzte Aktualisierung:</strong> 9. März 2026</p>
+            <p><strong>Letzte Aktualisierung:</strong> 14. März 2026</p>
 
             <h2>1. Überblick</h2>
             <p>OPUS ist eine iOS-Anwendung, die Ihre biologischen Signale verfolgt und personalisierte Gesundheitseinblicke bietet. Ihre Privatsphäre hat für uns höchste Priorität.</p>
@@ -199,16 +216,33 @@
             <p><strong>c) Manuell eingegebene Daten</strong></p>
             <ul><li>Koffeinkonsum</li><li>Alkoholkonsum</li><li>Wasseraufnahme (Hydration)</li><li>Profilinformationen (Name, Alter, Geschlecht — optional)</li><li>Menstruationszyklus-Tracking (optional)</li></ul>
 
-            <h2>3. Cloud-Analyse (OPUS Pro)</h2>
-            <p>OPUS Pro-Abonnenten können die Cloud-Hautanalyse-Funktion nutzen. Bei Nutzung dieser Funktion:</p>
+            <h2>3. Cloud-Analyse (OPUS Pro) — KI-Dienst eines Drittanbieters</h2>
+            <p>Wenn Sie OPUS Pro abonnieren, können Sie die cloudbasierte Hautanalyse aktivieren. Bevor Daten gesendet werden, fragt die App um Ihre ausdrückliche Zustimmung.</p>
+            <p><strong>Welche Daten wir senden:</strong></p>
             <ul>
-                <li>Ihre Hautanalyse-Fotos werden sicher an unseren Backend-Server auf <strong>Railway</strong> (railway.com) übermittelt</li>
-                <li>Unser Server sendet die Bilder an die <strong>OpenAI API (GPT-4o)</strong> für KI-gestützte Hautanalyse</li>
-                <li>Die Analyseergebnisse werden an Ihr Gerät zurückgesendet</li>
-                <li>Fotos werden in Echtzeit verarbeitet und <strong>nicht dauerhaft</strong> auf unseren Servern oder OpenAI-Servern gespeichert</li>
-                <li>OpenAI verarbeitet die Daten gemäß ihrer API-Datennutzungsrichtlinie — API-Daten werden nicht zum Training ihrer Modelle verwendet</li>
+                <li>Ihr komprimiertes Hautscan-Foto (kein Name, keine E-Mail oder persönliche Kennungen angehängt)</li>
+                <li>Grundlegender Gerätekontext (Beleuchtungswert, Scan-Anzahl)</li>
             </ul>
-            <div class="highlight"><strong>Sie haben die Kontrolle:</strong> Die Cloud-Analyse ist eine optionale Funktion. Sie können OPUS nutzen, ohne jemals Fotos in die Cloud zu senden.</div>
+            <p><strong>Wer Ihre Daten verarbeitet:</strong></p>
+            <ul>
+                <li><strong>OPUS-Server auf Railway</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — empfängt und leitet Ihren Scan weiter</li>
+                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — verarbeitet das Bild mit dem GPT-4o Vision-KI-Modell</li>
+            </ul>
+            <p><strong>Wie Ihre Daten behandelt werden:</strong></p>
+            <ul>
+                <li>Ihr Foto wird über eine verschlüsselte HTTPS-Verbindung gesendet</li>
+                <li>OpenAI verarbeitet das Bild und gibt Analyseergebnisse zurück</li>
+                <li>Gemäß der <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">API-Datennutzungsrichtlinie von OpenAI</a> werden API-Eingaben <strong>NICHT</strong> für Training verwendet</li>
+                <li>Ihr Foto wird <strong>NICHT</strong> auf unseren Servern oder von OpenAI nach der Verarbeitung gespeichert</li>
+                <li>Nur die Text-Analyseergebnisse werden an Ihr Gerät zurückgegeben</li>
+            </ul>
+            <p><strong>Ihre Kontrolle:</strong></p>
+            <ul>
+                <li>Die Cloud-Analyse erfordert Ihre ausdrückliche Opt-in-Zustimmung</li>
+                <li>Sie können die Zustimmung jederzeit in Einstellungen &gt; KI-Datennutzung widerrufen</li>
+                <li>Ohne Zustimmung erfolgt die gesamte Analyse nur auf dem Gerät (keine Daten verlassen Ihr Telefon)</li>
+                <li>Kostenlose Nutzer senden niemals Daten in die Cloud — die Analyse erfolgt immer auf dem Gerät</li>
+            </ul>
 
             <h2>4. Datensynchronisierung</h2>
             <p>OPUS verwendet <strong>Supabase</strong> (supabase.com) für optionale Cloud-Synchronisierung:</p>
@@ -237,9 +271,9 @@
             <h2>7. Drittanbieter-Dienste</h2>
             <p>OPUS integriert die folgenden Drittanbieter-Dienste:</p>
             <ul>
-                <li><strong>OpenAI API (GPT-4o):</strong> Für OPUS Pro Cloud-Hautanalyse. Fotos werden über unser Backend für KI-Analyse gesendet. OpenAI verwendet API-Daten nicht zum Training von Modellen</li>
+                <li><strong>OpenAI API (GPT-4o):</strong> Für OPUS Pro Cloud-Hautanalyse. Ihr Hautscan-Foto wird über unser Backend an OpenAI zur KI-Analyse gesendet. OpenAI speichert Ihr Foto nicht und verwendet API-Daten nicht zum Training von Modellen. Siehe Abschnitt 3 für alle Details</li>
+                <li><strong>Railway:</strong> Hostet unseren Backend-Server (<a href="https://railway.app" target="_blank">railway.app</a>), der Cloud-Analyse-Anfragen empfängt und an OpenAI weiterleitet. Fotos werden nicht auf Railway gespeichert</li>
                 <li><strong>Supabase:</strong> Für optionale Konto- und Datensynchronisierung. Gehostet auf AWS-Infrastruktur</li>
-                <li><strong>Railway:</strong> Hostet unseren Backend-Server für Cloud-Analyse-Anfragen</li>
                 <li><strong>Apple HealthKit:</strong> Daten werden gemäß den Apple-Richtlinien geschützt</li>
             </ul>
             <p>Wir:</p>
@@ -272,7 +306,7 @@
 
         <!-- ═══ ESPAÑOL ═══ -->
         <div id="es" class="section">
-            <p><strong>Última actualización:</strong> 9 de marzo de 2026</p>
+            <p><strong>Última actualización:</strong> 14 de marzo de 2026</p>
 
             <h2>1. Descripción general</h2>
             <p>OPUS es una aplicación iOS que rastrea tus señales biológicas y proporciona información de salud personalizada. Tu privacidad es nuestra máxima prioridad.</p>
@@ -286,16 +320,33 @@
             <p><strong>c) Datos ingresados manualmente</strong></p>
             <ul><li>Consumo de cafeína</li><li>Consumo de alcohol</li><li>Consumo de agua (hidratación)</li><li>Información de perfil (nombre, edad, género — opcional)</li><li>Seguimiento del ciclo menstrual (opcional)</li></ul>
 
-            <h2>3. Análisis en la Nube (OPUS Pro)</h2>
-            <p>Los suscriptores de OPUS Pro pueden usar la función de Análisis de Piel en la Nube. Al usar esta función:</p>
+            <h2>3. Análisis en la Nube (OPUS Pro) — Servicio de IA de terceros</h2>
+            <p>Al suscribirte a OPUS Pro, puedes optar por el análisis de piel basado en la nube. Antes de enviar cualquier dato, la aplicación solicitará tu consentimiento explícito.</p>
+            <p><strong>Datos que enviamos:</strong></p>
             <ul>
-                <li>Tus fotos de análisis de piel se transmiten de forma segura a nuestro servidor backend alojado en <strong>Railway</strong> (railway.com)</li>
-                <li>Nuestro servidor envía las imágenes a la <strong>API de OpenAI (GPT-4o)</strong> para análisis de piel con IA</li>
-                <li>Los resultados del análisis se devuelven a tu dispositivo</li>
-                <li>Las fotos enviadas para análisis en la nube se procesan en tiempo real y <strong>no se almacenan permanentemente</strong> en nuestros servidores ni en los de OpenAI</li>
-                <li>OpenAI procesa los datos de acuerdo con su política de uso de datos de API — los datos de API no se usan para entrenar sus modelos</li>
+                <li>Tu foto de escaneo de piel comprimida (sin nombre, correo electrónico ni identificadores personales adjuntos)</li>
+                <li>Contexto básico del dispositivo (puntuación de iluminación, cantidad de escaneos)</li>
             </ul>
-            <div class="highlight"><strong>Siempre tienes el control:</strong> El Análisis en la Nube es una función opcional. Puedes usar OPUS sin enviar fotos a la nube.</div>
+            <p><strong>Quién procesa tus datos:</strong></p>
+            <ul>
+                <li><strong>Servidores OPUS en Railway</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — recibe y enruta tu escaneo</li>
+                <li><strong>API de OpenAI</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — procesa la imagen usando el modelo de visión IA GPT-4o</li>
+            </ul>
+            <p><strong>Cómo se manejan tus datos:</strong></p>
+            <ul>
+                <li>Tu foto se envía mediante conexión HTTPS cifrada</li>
+                <li>OpenAI procesa la imagen y devuelve los resultados del análisis</li>
+                <li>Según la <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">política de uso de datos de API de OpenAI</a>, las entradas de API <strong>NO</strong> se usan para entrenamiento</li>
+                <li>Tu foto <strong>NO se almacena</strong> en nuestros servidores ni por OpenAI después del procesamiento</li>
+                <li>Solo los resultados de análisis en texto se devuelven a tu dispositivo</li>
+            </ul>
+            <p><strong>Tu control:</strong></p>
+            <ul>
+                <li>El análisis en la nube requiere tu consentimiento explícito de activación</li>
+                <li>Puedes revocar el consentimiento en cualquier momento en Ajustes &gt; Uso de datos de IA</li>
+                <li>Sin consentimiento, todo el análisis se ejecuta solo en el dispositivo (ningún dato sale de tu teléfono)</li>
+                <li>Los usuarios gratuitos nunca envían datos a la nube — el análisis siempre es en el dispositivo</li>
+            </ul>
 
             <h2>4. Sincronización de datos</h2>
             <p>OPUS utiliza <strong>Supabase</strong> (supabase.com) para sincronización en la nube opcional:</p>
@@ -324,9 +375,9 @@
             <h2>7. Servicios de terceros</h2>
             <p>OPUS se integra con los siguientes servicios de terceros:</p>
             <ul>
-                <li><strong>API de OpenAI (GPT-4o):</strong> Utilizado para el Análisis de Piel en la Nube de OPUS Pro. Las fotos se envían a través de nuestro backend para análisis con IA. OpenAI no usa datos de API para entrenar modelos</li>
+                <li><strong>API de OpenAI (GPT-4o):</strong> Utilizado para el Análisis de Piel en la Nube de OPUS Pro. Tu foto de escaneo de piel se envía a través de nuestro backend a OpenAI para análisis con IA. OpenAI no almacena tu foto y no usa datos de API para entrenar modelos. Ver Sección 3 para todos los detalles</li>
+                <li><strong>Railway:</strong> Aloja nuestro servidor backend (<a href="https://railway.app" target="_blank">railway.app</a>) que recibe y enruta las solicitudes de Análisis en la Nube a OpenAI. Las fotos no se almacenan en Railway</li>
                 <li><strong>Supabase:</strong> Utilizado para cuenta opcional y sincronización de datos. Alojado en infraestructura de AWS</li>
-                <li><strong>Railway:</strong> Aloja nuestro servidor backend que procesa solicitudes de Análisis en la Nube</li>
                 <li><strong>Apple HealthKit:</strong> Los datos están protegidos de acuerdo con las directrices de Apple</li>
             </ul>
             <p>No:</p>
@@ -359,7 +410,7 @@
 
         <!-- ═══ FRANÇAIS ═══ -->
         <div id="fr" class="section">
-            <p><strong>Dernière mise à jour :</strong> 9 mars 2026</p>
+            <p><strong>Dernière mise à jour :</strong> 14 mars 2026</p>
 
             <h2>1. Aperçu</h2>
             <p>OPUS est une application iOS qui suit vos signaux biologiques et fournit des informations de santé personnalisées. Votre vie privée est notre priorité absolue.</p>
@@ -373,16 +424,33 @@
             <p><strong>c) Données saisies manuellement</strong></p>
             <ul><li>Consommation de caféine</li><li>Consommation d'alcool</li><li>Consommation d'eau (hydratation)</li><li>Informations de profil (nom, âge, sexe — facultatif)</li><li>Suivi du cycle menstruel (facultatif)</li></ul>
 
-            <h2>3. Analyse Cloud (OPUS Pro)</h2>
-            <p>Les abonnés OPUS Pro peuvent utiliser la fonction d'Analyse Cutanée Cloud. Lors de l'utilisation de cette fonction :</p>
+            <h2>3. Analyse Cloud (OPUS Pro) — Service IA tiers</h2>
+            <p>En vous abonnant à OPUS Pro, vous pouvez opter pour l'analyse cutanée basée sur le cloud. Avant l'envoi de toute donnée, l'application demandera votre consentement explicite.</p>
+            <p><strong>Données que nous envoyons :</strong></p>
             <ul>
-                <li>Vos photos d'analyse cutanée sont transmises de manière sécurisée à notre serveur backend hébergé sur <strong>Railway</strong> (railway.com)</li>
-                <li>Notre serveur envoie les images à l'<strong>API OpenAI (GPT-4o)</strong> pour une analyse cutanée par IA</li>
-                <li>Les résultats d'analyse sont renvoyés à votre appareil</li>
-                <li>Les photos envoyées pour l'analyse cloud sont traitées en temps réel et ne sont <strong>pas stockées de manière permanente</strong> sur nos serveurs ni sur ceux d'OpenAI</li>
-                <li>OpenAI traite les données conformément à sa politique d'utilisation des données API — les données API ne sont pas utilisées pour entraîner leurs modèles</li>
+                <li>Votre photo de scan cutané compressée (sans nom, e-mail ni identifiants personnels joints)</li>
+                <li>Contexte basique de l'appareil (score d'éclairage, nombre de scans)</li>
             </ul>
-            <div class="highlight"><strong>Vous gardez le contrôle :</strong> L'Analyse Cloud est une fonctionnalité optionnelle. Vous pouvez utiliser OPUS sans jamais envoyer de photos vers le cloud.</div>
+            <p><strong>Qui traite vos données :</strong></p>
+            <ul>
+                <li><strong>Serveurs OPUS sur Railway</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — reçoit et achemine votre scan</li>
+                <li><strong>API OpenAI</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — traite l'image à l'aide du modèle de vision IA GPT-4o</li>
+            </ul>
+            <p><strong>Comment vos données sont traitées :</strong></p>
+            <ul>
+                <li>Votre photo est envoyée via une connexion HTTPS chiffrée</li>
+                <li>OpenAI traite l'image et renvoie les résultats d'analyse</li>
+                <li>Conformément à la <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">politique d'utilisation des données API d'OpenAI</a>, les entrées API ne sont <strong>PAS</strong> utilisées pour l'entraînement</li>
+                <li>Votre photo n'est <strong>PAS stockée</strong> sur nos serveurs ni par OpenAI après le traitement</li>
+                <li>Seuls les résultats d'analyse textuels sont renvoyés à votre appareil</li>
+            </ul>
+            <p><strong>Votre contrôle :</strong></p>
+            <ul>
+                <li>L'analyse cloud nécessite votre consentement explicite d'activation</li>
+                <li>Vous pouvez révoquer le consentement à tout moment dans Réglages &gt; Utilisation des données IA</li>
+                <li>Sans consentement, toute l'analyse s'effectue uniquement sur l'appareil (aucune donnée ne quitte votre téléphone)</li>
+                <li>Les utilisateurs gratuits n'envoient jamais de données vers le cloud — l'analyse est toujours sur l'appareil</li>
+            </ul>
 
             <h2>4. Synchronisation des données</h2>
             <p>OPUS utilise <strong>Supabase</strong> (supabase.com) pour la synchronisation cloud optionnelle :</p>
@@ -411,9 +479,9 @@
             <h2>7. Services tiers</h2>
             <p>OPUS s'intègre aux services tiers suivants :</p>
             <ul>
-                <li><strong>API OpenAI (GPT-4o) :</strong> Utilisée pour l'Analyse Cutanée Cloud OPUS Pro. Les photos sont envoyées via notre backend pour analyse par IA. OpenAI n'utilise pas les données API pour entraîner ses modèles</li>
+                <li><strong>API OpenAI (GPT-4o) :</strong> Utilisée pour l'Analyse Cutanée Cloud OPUS Pro. Votre photo de scan cutané est envoyée via notre backend à OpenAI pour analyse par IA. OpenAI ne stocke pas votre photo et n'utilise pas les données API pour entraîner ses modèles. Voir Section 3 pour tous les détails</li>
+                <li><strong>Railway :</strong> Héberge notre serveur backend (<a href="https://railway.app" target="_blank">railway.app</a>) qui reçoit et achemine les demandes d'Analyse Cloud vers OpenAI. Les photos ne sont pas stockées sur Railway</li>
                 <li><strong>Supabase :</strong> Utilisé pour le compte optionnel et la synchronisation des données. Hébergé sur l'infrastructure AWS</li>
-                <li><strong>Railway :</strong> Héberge notre serveur backend pour le traitement des demandes d'Analyse Cloud</li>
                 <li><strong>Apple HealthKit :</strong> Les données sont protégées conformément aux directives d'Apple</li>
             </ul>
             <p>Nous ne :</p>
@@ -446,7 +514,7 @@
 
         <!-- ═══ TÜRKÇE ═══ -->
         <div id="tr" class="section">
-            <p><strong>Son güncelleme:</strong> 9 Mart 2026</p>
+            <p><strong>Son güncelleme:</strong> 14 Mart 2026</p>
 
             <h2>1. Genel Bakış</h2>
             <p>OPUS, biyolojik sinyallerinizi takip eden ve kişiselleştirilmiş sağlık içgörüleri sunan bir iOS uygulamasıdır. Gizliliğiniz bizim için en önemli önceliktir.</p>
@@ -460,16 +528,33 @@
             <p><strong>c) Manuel Giriş Verileri</strong></p>
             <ul><li>Kafein tüketimi</li><li>Alkol tüketimi</li><li>Su tüketimi (hidrasyon)</li><li>Profil bilgileri (isim, yaş, cinsiyet — isteğe bağlı)</li><li>Regl döngüsü takibi (isteğe bağlı)</li></ul>
 
-            <h2>3. Bulut Analizi (OPUS Pro)</h2>
-            <p>OPUS Pro aboneleri Bulut Cilt Analizi özelliğini kullanabilir. Bu özelliği kullandığınızda:</p>
+            <h2>3. Bulut Analizi (OPUS Pro) — Üçüncü Taraf AI Hizmeti</h2>
+            <p>OPUS Pro'ya abone olduğunuzda, bulut tabanlı cilt analizini etkinleştirebilirsiniz. Herhangi bir veri gönderilmeden önce uygulama açık onayınızı isteyecektir.</p>
+            <p><strong>Gönderdiğimiz veriler:</strong></p>
             <ul>
-                <li>Cilt taraması fotoğraflarınız <strong>Railway</strong> (railway.com) üzerinde barındırılan backend sunucumuza güvenli olarak iletilir</li>
-                <li>Sunucumuz görüntüleri yapay zeka destekli cilt analizi için <strong>OpenAI API'sine (GPT-4o)</strong> gönderir</li>
-                <li>Analiz sonuçları cihazınıza geri gönderilir</li>
-                <li>Bulut analizi için gönderilen fotoğraflar gerçek zamanlı olarak işlenir ve sunucularımızda veya OpenAI sunucularında <strong>kalıcı olarak saklanmaz</strong></li>
-                <li>OpenAI, verileri API veri kullanım politikasına uygun olarak işler — API verileri modellerini eğitmek için kullanılmaz</li>
+                <li>Sıkıştırılmış cilt tarama fotoğrafınız (isim, e-posta veya kişisel tanımlayıcı eklenmez)</li>
+                <li>Temel cihaz bağlamı (aydınlatma puanı, tarama sayısı)</li>
             </ul>
-            <div class="highlight"><strong>Kontrol her zaman sizdedir:</strong> Bulut Analizi isteğe bağlı bir özelliktir. OPUS'u fotoğrafları buluta göndermeden kullanabilirsiniz.</div>
+            <p><strong>Verilerinizi kim işliyor:</strong></p>
+            <ul>
+                <li><strong>Railway üzerinde OPUS sunucuları</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — taramanızı alır ve yönlendirir</li>
+                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — görüntüyü GPT-4o görüş AI modeli kullanarak işler</li>
+            </ul>
+            <p><strong>Verileriniz nasıl işlenir:</strong></p>
+            <ul>
+                <li>Fotoğrafınız şifreli HTTPS bağlantısı üzerinden gönderilir</li>
+                <li>OpenAI görüntüyü işler ve analiz sonuçlarını döndürür</li>
+                <li><a href="https://openai.com/policies/api-data-usage-policies" target="_blank">OpenAI'ın API veri kullanım politikasına</a> göre, API girdileri eğitim için <strong>KULLANILMAZ</strong></li>
+                <li>Fotoğrafınız işleme sonrası sunucularımızda veya OpenAI tarafından <strong>SAKLANMAZ</strong></li>
+                <li>Yalnızca metin analiz sonuçları cihazınıza döner</li>
+            </ul>
+            <p><strong>Sizin kontrolünüz:</strong></p>
+            <ul>
+                <li>Bulut analizi açık opt-in onayınızı gerektirir</li>
+                <li>Onayı istediğiniz zaman Ayarlar &gt; AI Veri Kullanımı'ndan iptal edebilirsiniz</li>
+                <li>Onay olmadan tüm analiz yalnızca cihazda çalışır (telefonunuzdan veri çıkmaz)</li>
+                <li>Ücretsiz kullanıcılar asla buluta veri göndermez — analiz her zaman cihaz üzerindedir</li>
+            </ul>
 
             <h2>4. Veri Senkronizasyonu</h2>
             <p>OPUS, isteğe bağlı bulut senkronizasyonu için <strong>Supabase</strong> (supabase.com) kullanır:</p>
@@ -498,9 +583,9 @@
             <h2>7. Üçüncü Taraf Hizmetleri</h2>
             <p>OPUS aşağıdaki üçüncü taraf hizmetlerle entegre çalışır:</p>
             <ul>
-                <li><strong>OpenAI API (GPT-4o):</strong> OPUS Pro Bulut Cilt Analizi için kullanılır. Fotoğraflar yapay zeka analizi için backend üzerinden gönderilir. OpenAI, API verilerini model eğitimi için kullanmaz</li>
+                <li><strong>OpenAI API (GPT-4o):</strong> OPUS Pro Bulut Cilt Analizi için kullanılır. Cilt tarama fotoğrafınız backend üzerinden OpenAI'a AI analizi için gönderilir. OpenAI fotoğrafınızı saklamaz ve API verilerini model eğitimi için kullanmaz. Tüm ayrıntılar için Bölüm 3'e bakın</li>
+                <li><strong>Railway:</strong> Bulut Analizi isteklerini alan ve OpenAI'a yönlendiren backend sunucumuzu barındırır (<a href="https://railway.app" target="_blank">railway.app</a>). Fotoğraflar Railway'de saklanmaz</li>
                 <li><strong>Supabase:</strong> İsteğe bağlı hesap ve veri senkronizasyonu için kullanılır. AWS altyapısında barındırılır</li>
-                <li><strong>Railway:</strong> Bulut Analizi isteklerini işleyen backend sunucumuzu barındırır</li>
                 <li><strong>Apple HealthKit:</strong> Veriler Apple kurallarına uygun olarak korunur</li>
             </ul>
             <p>Biz:</p>
@@ -533,7 +618,7 @@
 
         <!-- ═══ 日本語 ═══ -->
         <div id="ja" class="section">
-            <p><strong>最終更新日：</strong>2026年3月9日</p>
+            <p><strong>最終更新日：</strong>2026年3月14日</p>
 
             <h2>1. 概要</h2>
             <p>OPUSは、生体シグナルを追跡し、パーソナライズされた健康インサイトを提供するiOSアプリケーションです。お客様のプライバシーは私たちの最優先事項です。</p>
@@ -547,16 +632,33 @@
             <p><strong>c) 手動入力データ</strong></p>
             <ul><li>カフェイン摂取量</li><li>アルコール摂取量</li><li>水分摂取量（水分補給）</li><li>プロフィール情報（名前、年齢、性別 — 任意）</li><li>月経周期トラッキング（任意）</li></ul>
 
-            <h2>3. クラウド分析（OPUS Pro）</h2>
-            <p>OPUS Proサブスクリプションユーザーはクラウド肌分析機能を利用できます。この機能を使用する際：</p>
+            <h2>3. クラウド分析（OPUS Pro）— サードパーティAIサービス</h2>
+            <p>OPUS Proに加入すると、クラウドベースの肌分析を有効にできます。データが送信される前に、アプリが明示的な同意を求めます。</p>
+            <p><strong>送信するデータ：</strong></p>
             <ul>
-                <li>肌スキャン写真は<strong>Railway</strong>（railway.com）でホストされている当社のバックエンドサーバーに安全に送信されます</li>
-                <li>当社のサーバーが画像をAIによる肌分析のため<strong>OpenAI API（GPT-4o）</strong>に送信します</li>
-                <li>分析結果がお客様のデバイスに返されます</li>
-                <li>クラウド分析用に送信された写真はリアルタイムで処理され、当社のサーバーやOpenAIのサーバーに<strong>永続的に保存されることはありません</strong></li>
-                <li>OpenAIはAPIデータ使用ポリシーに従ってデータを処理します — APIデータはモデルのトレーニングに使用されません</li>
+                <li>圧縮された肌スキャン写真（名前、メール、個人識別情報は含まれません）</li>
+                <li>基本的なデバイスコンテキスト（照明スコア、スキャン回数）</li>
             </ul>
-            <div class="highlight"><strong>常にお客様が管理：</strong>クラウド分析はオプトイン機能です。写真をクラウドに送信せずにOPUSを使用できます。</div>
+            <p><strong>データを処理する主体：</strong></p>
+            <ul>
+                <li><strong>Railway上のOPUSサーバー</strong>（<a href="https://railway.app" target="_blank">railway.app</a>）— スキャンを受信し転送します</li>
+                <li><strong>OpenAI API</strong>（<a href="https://openai.com" target="_blank">openai.com</a>）— GPT-4oビジョンAIモデルを使用して画像を処理します</li>
+            </ul>
+            <p><strong>データの取り扱い：</strong></p>
+            <ul>
+                <li>写真は暗号化されたHTTPS接続で送信されます</li>
+                <li>OpenAIが画像を処理し、分析結果を返します</li>
+                <li><a href="https://openai.com/policies/api-data-usage-policies" target="_blank">OpenAIのAPIデータ使用ポリシー</a>により、API入力はトレーニングに<strong>使用されません</strong></li>
+                <li>写真は処理後、当社のサーバーおよびOpenAIに<strong>保存されません</strong></li>
+                <li>テキスト分析結果のみがお客様のデバイスに返されます</li>
+            </ul>
+            <p><strong>お客様の管理：</strong></p>
+            <ul>
+                <li>クラウド分析には明示的なオプトイン同意が必要です</li>
+                <li>設定 &gt; AIデータ使用からいつでも同意を取り消せます</li>
+                <li>同意なしでは、すべての分析がデバイス上のみで実行されます（データは端末から送信されません）</li>
+                <li>無料ユーザーはクラウドにデータを送信しません — 分析は常にデバイス上で行われます</li>
+            </ul>
 
             <h2>4. データ同期</h2>
             <p>OPUSはオプションのクラウド同期に<strong>Supabase</strong>（supabase.com）を使用します：</p>
@@ -585,9 +687,9 @@
             <h2>7. サードパーティサービス</h2>
             <p>OPUSは以下のサードパーティサービスと統合しています：</p>
             <ul>
-                <li><strong>OpenAI API（GPT-4o）：</strong>OPUS Proクラウド肌分析に使用。写真はAI分析のためにバックエンド経由で送信されます。OpenAIはAPIデータをモデルトレーニングに使用しません</li>
+                <li><strong>OpenAI API（GPT-4o）：</strong>OPUS Proクラウド肌分析に使用。肌スキャン写真がバックエンド経由でOpenAIにAI分析のために送信されます。OpenAIは写真を保存せず、APIデータをモデルトレーニングに使用しません。詳細はセクション3をご覧ください</li>
+                <li><strong>Railway：</strong>クラウド分析リクエストを受信しOpenAIに転送するバックエンドサーバーをホスト（<a href="https://railway.app" target="_blank">railway.app</a>）。写真はRailwayに保存されません</li>
                 <li><strong>Supabase：</strong>オプションのアカウントとデータ同期に使用。AWSインフラでホスト</li>
-                <li><strong>Railway：</strong>クラウド分析リクエストを処理するバックエンドサーバーをホスト</li>
                 <li><strong>Apple HealthKit：</strong>データはAppleのガイドラインに準拠して保護されます</li>
             </ul>
             <p>当社は：</p>
@@ -620,7 +722,7 @@
 
         <!-- ═══ 한국어 ═══ -->
         <div id="ko" class="section">
-            <p><strong>최종 업데이트:</strong> 2026년 3월 9일</p>
+            <p><strong>최종 업데이트:</strong> 2026년 3월 14일</p>
 
             <h2>1. 개요</h2>
             <p>OPUS는 생체 신호를 추적하고 개인 맞춤 건강 인사이트를 제공하는 iOS 애플리케이션입니다. 귀하의 개인정보 보호는 저희의 최우선 과제입니다.</p>
@@ -634,16 +736,33 @@
             <p><strong>c) 수동 입력 데이터</strong></p>
             <ul><li>카페인 섭취량</li><li>알코올 섭취량</li><li>수분 섭취량 (수분 보충)</li><li>프로필 정보 (이름, 나이, 성별 — 선택 사항)</li><li>생리 주기 추적 (선택 사항)</li></ul>
 
-            <h2>3. 클라우드 분석 (OPUS Pro)</h2>
-            <p>OPUS Pro 구독자는 클라우드 피부 분석 기능을 사용할 수 있습니다. 이 기능을 사용할 때:</p>
+            <h2>3. 클라우드 분석 (OPUS Pro) — 서드파티 AI 서비스</h2>
+            <p>OPUS Pro를 구독하면 클라우드 기반 피부 분석을 활성화할 수 있습니다. 데이터가 전송되기 전에 앱에서 명시적 동의를 요청합니다.</p>
+            <p><strong>전송하는 데이터:</strong></p>
             <ul>
-                <li>피부 스캔 사진은 <strong>Railway</strong>(railway.com)에서 호스팅되는 백엔드 서버로 안전하게 전송됩니다</li>
-                <li>당사 서버는 AI 기반 피부 분석을 위해 이미지를 <strong>OpenAI API(GPT-4o)</strong>로 전송합니다</li>
-                <li>분석 결과가 귀하의 기기로 반환됩니다</li>
-                <li>클라우드 분석을 위해 전송된 사진은 실시간으로 처리되며 당사 서버나 OpenAI 서버에 <strong>영구적으로 저장되지 않습니다</strong></li>
-                <li>OpenAI는 API 데이터 사용 정책에 따라 데이터를 처리합니다 — API 데이터는 모델 훈련에 사용되지 않습니다</li>
+                <li>압축된 피부 스캔 사진 (이름, 이메일 또는 개인 식별 정보 미포함)</li>
+                <li>기본 기기 컨텍스트 (조명 점수, 스캔 횟수)</li>
             </ul>
-            <div class="highlight"><strong>항상 귀하가 통제합니다:</strong> 클라우드 분석은 선택적 기능입니다. 사진을 클라우드로 보내지 않고도 OPUS를 사용할 수 있습니다.</div>
+            <p><strong>데이터 처리 주체:</strong></p>
+            <ul>
+                <li><strong>Railway의 OPUS 서버</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — 스캔을 수신하고 라우팅합니다</li>
+                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — GPT-4o 비전 AI 모델을 사용하여 이미지를 처리합니다</li>
+            </ul>
+            <p><strong>데이터 처리 방법:</strong></p>
+            <ul>
+                <li>사진은 암호화된 HTTPS 연결을 통해 전송됩니다</li>
+                <li>OpenAI가 이미지를 처리하고 분석 결과를 반환합니다</li>
+                <li><a href="https://openai.com/policies/api-data-usage-policies" target="_blank">OpenAI의 API 데이터 사용 정책</a>에 따라 API 입력은 훈련에 <strong>사용되지 않습니다</strong></li>
+                <li>사진은 처리 후 당사 서버나 OpenAI에 <strong>저장되지 않습니다</strong></li>
+                <li>텍스트 분석 결과만 귀하의 기기로 반환됩니다</li>
+            </ul>
+            <p><strong>귀하의 제어:</strong></p>
+            <ul>
+                <li>클라우드 분석은 명시적 옵트인 동의가 필요합니다</li>
+                <li>설정 &gt; AI 데이터 사용에서 언제든지 동의를 취소할 수 있습니다</li>
+                <li>동의 없이는 모든 분석이 기기에서만 실행됩니다 (데이터가 휴대폰을 떠나지 않습니다)</li>
+                <li>무료 사용자는 클라우드로 데이터를 보내지 않습니다 — 분석은 항상 기기에서 수행됩니다</li>
+            </ul>
 
             <h2>4. 데이터 동기화</h2>
             <p>OPUS는 선택적 클라우드 동기화를 위해 <strong>Supabase</strong>(supabase.com)를 사용합니다:</p>
@@ -672,9 +791,9 @@
             <h2>7. 서드파티 서비스</h2>
             <p>OPUS는 다음 서드파티 서비스와 통합됩니다:</p>
             <ul>
-                <li><strong>OpenAI API(GPT-4o):</strong> OPUS Pro 클라우드 피부 분석에 사용. 사진은 AI 분석을 위해 백엔드를 통해 전송됩니다. OpenAI는 API 데이터를 모델 훈련에 사용하지 않습니다</li>
+                <li><strong>OpenAI API(GPT-4o):</strong> OPUS Pro 클라우드 피부 분석에 사용. 피부 스캔 사진이 백엔드를 통해 OpenAI로 AI 분석을 위해 전송됩니다. OpenAI는 사진을 저장하지 않으며 API 데이터를 모델 훈련에 사용하지 않습니다. 자세한 내용은 섹션 3을 참조하세요</li>
+                <li><strong>Railway:</strong> 클라우드 분석 요청을 수신하고 OpenAI로 라우팅하는 백엔드 서버 호스팅 (<a href="https://railway.app" target="_blank">railway.app</a>). 사진은 Railway에 저장되지 않습니다</li>
                 <li><strong>Supabase:</strong> 선택적 계정 및 데이터 동기화에 사용. AWS 인프라에서 호스팅</li>
-                <li><strong>Railway:</strong> 클라우드 분석 요청을 처리하는 백엔드 서버 호스팅</li>
                 <li><strong>Apple HealthKit:</strong> 데이터는 Apple 가이드라인에 따라 보호됩니다</li>
             </ul>
             <p>당사는:</p>
@@ -707,7 +826,7 @@
 
         <div class="footer">
             <p>&copy; 2026 OPUS. All rights reserved.</p>
-            <p>Effective date: March 9, 2026</p>
+            <p>Effective date: March 14, 2026</p>
         </div>
     </div>
 
