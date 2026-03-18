@@ -98,7 +98,7 @@
 
         <!-- ═══ ENGLISH ═══ -->
         <div id="en" class="section active">
-            <p><strong>Last updated:</strong> March 14, 2026</p>
+            <p><strong>Last updated:</strong> March 18, 2026</p>
 
             <h2>1. Overview</h2>
             <p>OPUS is an iOS application that tracks your biological signals and provides personalized health insights. Your privacy is our highest priority.</p>
@@ -118,11 +118,12 @@
             <ul>
                 <li>Your compressed skin scan photo (no name, email, or personal identifiers attached)</li>
                 <li>Basic device context (lighting score, scan count)</li>
+                <li>Your daily wellness metrics (sleep duration, heart rate variability, step count, activity calories, skin score) for personalized AI-powered daily insights — only with your explicit consent</li>
             </ul>
             <p><strong>Who processes your data:</strong></p>
             <ul>
                 <li><strong>OPUS servers hosted on Railway</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — receives and routes your scan</li>
-                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — processes the image using GPT-4o vision AI model</li>
+                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — processes the image using GPT-4o vision AI model, and generates personalized daily wellness insights from your health metrics</li>
             </ul>
             <p><strong>How your data is handled:</strong></p>
             <ul>
@@ -143,7 +144,7 @@
             <h2>4. Data Synchronization</h2>
             <p>OPUS uses <strong>Supabase</strong> (supabase.com) for optional cloud synchronization:</p>
             <ul>
-                <li>If you create an account or enable sync, your profile data and health summaries may be stored in Supabase's cloud infrastructure</li>
+                <li>If you create an account or enable sync, your profile data and daily wellness metrics (including sleep, heart rate variability, step count, activity calories, stress level, recovery score, and skin score) may be stored in Supabase's cloud infrastructure</li>
                 <li>Data is transmitted over encrypted connections (TLS) and stored securely</li>
                 <li>Supabase servers are hosted on AWS infrastructure</li>
                 <li>You can use OPUS without creating an account — sync is entirely optional</li>
@@ -167,7 +168,7 @@
             <h2>7. Third-Party Services</h2>
             <p>OPUS integrates with the following third-party services:</p>
             <ul>
-                <li><strong>OpenAI API (GPT-4o):</strong> Used for OPUS Pro Cloud Skin Analysis. Your skin scan photo is sent via our backend to OpenAI for AI-powered analysis. OpenAI does not store your photo and does not use API data to train models. See Section 3 for full details</li>
+                <li><strong>OpenAI API (GPT-4o):</strong> Used for OPUS Pro Cloud Skin Analysis and daily wellness insights. Your skin scan photo and daily health metrics are sent via our backend to OpenAI for AI-powered analysis. OpenAI does not store your photo and does not use API data to train models. See Section 3 for full details</li>
                 <li><strong>Railway:</strong> Hosts our backend server (<a href="https://railway.app" target="_blank">railway.app</a>) that receives and routes Cloud Analysis requests to OpenAI. Photos are not stored on Railway</li>
                 <li><strong>Supabase:</strong> Used for optional account and data synchronization. Hosted on AWS infrastructure</li>
                 <li><strong>Apple HealthKit:</strong> Data is protected in compliance with Apple's guidelines</li>
@@ -202,7 +203,7 @@
 
         <!-- ═══ DEUTSCH ═══ -->
         <div id="de" class="section">
-            <p><strong>Letzte Aktualisierung:</strong> 14. März 2026</p>
+            <p><strong>Letzte Aktualisierung:</strong> 18. März 2026</p>
 
             <h2>1. Überblick</h2>
             <p>OPUS ist eine iOS-Anwendung, die Ihre biologischen Signale verfolgt und personalisierte Gesundheitseinblicke bietet. Ihre Privatsphäre hat für uns höchste Priorität.</p>
@@ -222,11 +223,12 @@
             <ul>
                 <li>Ihr komprimiertes Hautscan-Foto (kein Name, keine E-Mail oder persönliche Kennungen angehängt)</li>
                 <li>Grundlegender Gerätekontext (Beleuchtungswert, Scan-Anzahl)</li>
+                <li>Ihre täglichen Wellness-Metriken (Schlafdauer, Herzfrequenzvariabilität, Schrittzahl, Aktivitätskalorien, Hautwert) für personalisierte KI-gestützte tägliche Einblicke — nur mit Ihrer ausdrücklichen Zustimmung</li>
             </ul>
             <p><strong>Wer Ihre Daten verarbeitet:</strong></p>
             <ul>
                 <li><strong>OPUS-Server auf Railway</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — empfängt und leitet Ihren Scan weiter</li>
-                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — verarbeitet das Bild mit dem GPT-4o Vision-KI-Modell</li>
+                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — verarbeitet das Bild mit dem GPT-4o Vision-KI-Modell und erstellt personalisierte tägliche Wellness-Einblicke aus Ihren Gesundheitsmetriken</li>
             </ul>
             <p><strong>Wie Ihre Daten behandelt werden:</strong></p>
             <ul>
@@ -247,7 +249,7 @@
             <h2>4. Datensynchronisierung</h2>
             <p>OPUS verwendet <strong>Supabase</strong> (supabase.com) für optionale Cloud-Synchronisierung:</p>
             <ul>
-                <li>Wenn Sie ein Konto erstellen oder die Synchronisierung aktivieren, können Ihre Profildaten und Gesundheitszusammenfassungen in der Cloud-Infrastruktur von Supabase gespeichert werden</li>
+                <li>Wenn Sie ein Konto erstellen oder die Synchronisierung aktivieren, können Ihre Profildaten und täglichen Wellness-Metriken (einschließlich Schlafdauer, Herzfrequenzvariabilität, Schrittzahl, Aktivitätskalorien, Stressniveau, Erholungswert und Hautwert) in der Cloud-Infrastruktur von Supabase gespeichert werden</li>
                 <li>Daten werden über verschlüsselte Verbindungen (TLS) übertragen und sicher gespeichert</li>
                 <li>Supabase-Server werden auf AWS-Infrastruktur gehostet</li>
                 <li>Sie können OPUS ohne Kontoerstellung nutzen — die Synchronisierung ist vollständig optional</li>
@@ -271,7 +273,7 @@
             <h2>7. Drittanbieter-Dienste</h2>
             <p>OPUS integriert die folgenden Drittanbieter-Dienste:</p>
             <ul>
-                <li><strong>OpenAI API (GPT-4o):</strong> Für OPUS Pro Cloud-Hautanalyse. Ihr Hautscan-Foto wird über unser Backend an OpenAI zur KI-Analyse gesendet. OpenAI speichert Ihr Foto nicht und verwendet API-Daten nicht zum Training von Modellen. Siehe Abschnitt 3 für alle Details</li>
+                <li><strong>OpenAI API (GPT-4o):</strong> Für OPUS Pro Cloud-Hautanalyse und tägliche Wellness-Einblicke. Ihr Hautscan-Foto und tägliche Gesundheitsmetriken werden über unser Backend an OpenAI zur KI-Analyse gesendet. OpenAI speichert Ihr Foto nicht und verwendet API-Daten nicht zum Training von Modellen. Siehe Abschnitt 3 für alle Details</li>
                 <li><strong>Railway:</strong> Hostet unseren Backend-Server (<a href="https://railway.app" target="_blank">railway.app</a>), der Cloud-Analyse-Anfragen empfängt und an OpenAI weiterleitet. Fotos werden nicht auf Railway gespeichert</li>
                 <li><strong>Supabase:</strong> Für optionale Konto- und Datensynchronisierung. Gehostet auf AWS-Infrastruktur</li>
                 <li><strong>Apple HealthKit:</strong> Daten werden gemäß den Apple-Richtlinien geschützt</li>
@@ -306,7 +308,7 @@
 
         <!-- ═══ ESPAÑOL ═══ -->
         <div id="es" class="section">
-            <p><strong>Última actualización:</strong> 14 de marzo de 2026</p>
+            <p><strong>Última actualización:</strong> 18 de marzo de 2026</p>
 
             <h2>1. Descripción general</h2>
             <p>OPUS es una aplicación iOS que rastrea tus señales biológicas y proporciona información de salud personalizada. Tu privacidad es nuestra máxima prioridad.</p>
@@ -326,11 +328,12 @@
             <ul>
                 <li>Tu foto de escaneo de piel comprimida (sin nombre, correo electrónico ni identificadores personales adjuntos)</li>
                 <li>Contexto básico del dispositivo (puntuación de iluminación, cantidad de escaneos)</li>
+                <li>Tus métricas diarias de bienestar (duración del sueño, variabilidad de frecuencia cardíaca, conteo de pasos, calorías de actividad, puntuación de piel) para información diaria personalizada con IA — solo con tu consentimiento explícito</li>
             </ul>
             <p><strong>Quién procesa tus datos:</strong></p>
             <ul>
                 <li><strong>Servidores OPUS en Railway</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — recibe y enruta tu escaneo</li>
-                <li><strong>API de OpenAI</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — procesa la imagen usando el modelo de visión IA GPT-4o</li>
+                <li><strong>API de OpenAI</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — procesa la imagen usando el modelo de visión IA GPT-4o y genera información diaria personalizada de bienestar a partir de tus métricas de salud</li>
             </ul>
             <p><strong>Cómo se manejan tus datos:</strong></p>
             <ul>
@@ -351,7 +354,7 @@
             <h2>4. Sincronización de datos</h2>
             <p>OPUS utiliza <strong>Supabase</strong> (supabase.com) para sincronización en la nube opcional:</p>
             <ul>
-                <li>Si creas una cuenta o activas la sincronización, tus datos de perfil y resúmenes de salud pueden almacenarse en la infraestructura en la nube de Supabase</li>
+                <li>Si creas una cuenta o activas la sincronización, tus datos de perfil y métricas diarias de bienestar (incluyendo sueño, variabilidad de frecuencia cardíaca, conteo de pasos, calorías de actividad, nivel de estrés, puntuación de recuperación y puntuación de piel) pueden almacenarse en la infraestructura en la nube de Supabase</li>
                 <li>Los datos se transmiten mediante conexiones cifradas (TLS) y se almacenan de forma segura</li>
                 <li>Los servidores de Supabase están alojados en infraestructura de AWS</li>
                 <li>Puedes usar OPUS sin crear una cuenta — la sincronización es completamente opcional</li>
@@ -375,7 +378,7 @@
             <h2>7. Servicios de terceros</h2>
             <p>OPUS se integra con los siguientes servicios de terceros:</p>
             <ul>
-                <li><strong>API de OpenAI (GPT-4o):</strong> Utilizado para el Análisis de Piel en la Nube de OPUS Pro. Tu foto de escaneo de piel se envía a través de nuestro backend a OpenAI para análisis con IA. OpenAI no almacena tu foto y no usa datos de API para entrenar modelos. Ver Sección 3 para todos los detalles</li>
+                <li><strong>API de OpenAI (GPT-4o):</strong> Utilizado para el Análisis de Piel en la Nube de OPUS Pro e información diaria de bienestar. Tu foto de escaneo de piel y métricas diarias de salud se envían a través de nuestro backend a OpenAI para análisis con IA. OpenAI no almacena tu foto y no usa datos de API para entrenar modelos. Ver Sección 3 para todos los detalles</li>
                 <li><strong>Railway:</strong> Aloja nuestro servidor backend (<a href="https://railway.app" target="_blank">railway.app</a>) que recibe y enruta las solicitudes de Análisis en la Nube a OpenAI. Las fotos no se almacenan en Railway</li>
                 <li><strong>Supabase:</strong> Utilizado para cuenta opcional y sincronización de datos. Alojado en infraestructura de AWS</li>
                 <li><strong>Apple HealthKit:</strong> Los datos están protegidos de acuerdo con las directrices de Apple</li>
@@ -410,7 +413,7 @@
 
         <!-- ═══ FRANÇAIS ═══ -->
         <div id="fr" class="section">
-            <p><strong>Dernière mise à jour :</strong> 14 mars 2026</p>
+            <p><strong>Dernière mise à jour :</strong> 18 mars 2026</p>
 
             <h2>1. Aperçu</h2>
             <p>OPUS est une application iOS qui suit vos signaux biologiques et fournit des informations de santé personnalisées. Votre vie privée est notre priorité absolue.</p>
@@ -430,11 +433,12 @@
             <ul>
                 <li>Votre photo de scan cutané compressée (sans nom, e-mail ni identifiants personnels joints)</li>
                 <li>Contexte basique de l'appareil (score d'éclairage, nombre de scans)</li>
+                <li>Vos métriques quotidiennes de bien-être (durée du sommeil, variabilité de la fréquence cardiaque, nombre de pas, calories d'activité, score cutané) pour des informations quotidiennes personnalisées par IA — uniquement avec votre consentement explicite</li>
             </ul>
             <p><strong>Qui traite vos données :</strong></p>
             <ul>
                 <li><strong>Serveurs OPUS sur Railway</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — reçoit et achemine votre scan</li>
-                <li><strong>API OpenAI</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — traite l'image à l'aide du modèle de vision IA GPT-4o</li>
+                <li><strong>API OpenAI</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — traite l'image à l'aide du modèle de vision IA GPT-4o et génère des informations quotidiennes personnalisées sur le bien-être à partir de vos métriques de santé</li>
             </ul>
             <p><strong>Comment vos données sont traitées :</strong></p>
             <ul>
@@ -455,7 +459,7 @@
             <h2>4. Synchronisation des données</h2>
             <p>OPUS utilise <strong>Supabase</strong> (supabase.com) pour la synchronisation cloud optionnelle :</p>
             <ul>
-                <li>Si vous créez un compte ou activez la synchronisation, vos données de profil et résumés de santé peuvent être stockés dans l'infrastructure cloud de Supabase</li>
+                <li>Si vous créez un compte ou activez la synchronisation, vos données de profil et métriques quotidiennes de bien-être (y compris sommeil, variabilité de la fréquence cardiaque, nombre de pas, calories d'activité, niveau de stress, score de récupération et score cutané) peuvent être stockés dans l'infrastructure cloud de Supabase</li>
                 <li>Les données sont transmises via des connexions cryptées (TLS) et stockées de manière sécurisée</li>
                 <li>Les serveurs Supabase sont hébergés sur l'infrastructure AWS</li>
                 <li>Vous pouvez utiliser OPUS sans créer de compte — la synchronisation est entièrement facultative</li>
@@ -479,7 +483,7 @@
             <h2>7. Services tiers</h2>
             <p>OPUS s'intègre aux services tiers suivants :</p>
             <ul>
-                <li><strong>API OpenAI (GPT-4o) :</strong> Utilisée pour l'Analyse Cutanée Cloud OPUS Pro. Votre photo de scan cutané est envoyée via notre backend à OpenAI pour analyse par IA. OpenAI ne stocke pas votre photo et n'utilise pas les données API pour entraîner ses modèles. Voir Section 3 pour tous les détails</li>
+                <li><strong>API OpenAI (GPT-4o) :</strong> Utilisée pour l'Analyse Cutanée Cloud OPUS Pro et les informations quotidiennes de bien-être. Votre photo de scan cutané et vos métriques de santé quotidiennes sont envoyées via notre backend à OpenAI pour analyse par IA. OpenAI ne stocke pas votre photo et n'utilise pas les données API pour entraîner ses modèles. Voir Section 3 pour tous les détails</li>
                 <li><strong>Railway :</strong> Héberge notre serveur backend (<a href="https://railway.app" target="_blank">railway.app</a>) qui reçoit et achemine les demandes d'Analyse Cloud vers OpenAI. Les photos ne sont pas stockées sur Railway</li>
                 <li><strong>Supabase :</strong> Utilisé pour le compte optionnel et la synchronisation des données. Hébergé sur l'infrastructure AWS</li>
                 <li><strong>Apple HealthKit :</strong> Les données sont protégées conformément aux directives d'Apple</li>
@@ -514,7 +518,7 @@
 
         <!-- ═══ TÜRKÇE ═══ -->
         <div id="tr" class="section">
-            <p><strong>Son güncelleme:</strong> 14 Mart 2026</p>
+            <p><strong>Son güncelleme:</strong> 18 Mart 2026</p>
 
             <h2>1. Genel Bakış</h2>
             <p>OPUS, biyolojik sinyallerinizi takip eden ve kişiselleştirilmiş sağlık içgörüleri sunan bir iOS uygulamasıdır. Gizliliğiniz bizim için en önemli önceliktir.</p>
@@ -534,11 +538,12 @@
             <ul>
                 <li>Sıkıştırılmış cilt tarama fotoğrafınız (isim, e-posta veya kişisel tanımlayıcı eklenmez)</li>
                 <li>Temel cihaz bağlamı (aydınlatma puanı, tarama sayısı)</li>
+                <li>Günlük wellness metrikleriniz (uyku süresi, kalp atış hızı değişkenliği, adım sayısı, aktivite kalorileri, cilt puanı) kişiselleştirilmiş yapay zeka destekli günlük içgörüler için — yalnızca açık onayınızla</li>
             </ul>
             <p><strong>Verilerinizi kim işliyor:</strong></p>
             <ul>
                 <li><strong>Railway üzerinde OPUS sunucuları</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — taramanızı alır ve yönlendirir</li>
-                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — görüntüyü GPT-4o görüş AI modeli kullanarak işler</li>
+                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — görüntüyü GPT-4o görüş AI modeli kullanarak işler ve sağlık metriklerinizden kişiselleştirilmiş günlük wellness içgörüleri oluşturur</li>
             </ul>
             <p><strong>Verileriniz nasıl işlenir:</strong></p>
             <ul>
@@ -559,7 +564,7 @@
             <h2>4. Veri Senkronizasyonu</h2>
             <p>OPUS, isteğe bağlı bulut senkronizasyonu için <strong>Supabase</strong> (supabase.com) kullanır:</p>
             <ul>
-                <li>Bir hesap oluşturur veya senkronizasyonu etkinleştirirseniz, profil verileriniz ve sağlık özetleriniz Supabase'in bulut altyapısında saklanabilir</li>
+                <li>Bir hesap oluşturur veya senkronizasyonu etkinleştirirseniz, profil verileriniz ve günlük wellness metrikleriniz (uyku süresi, kalp atış hızı değişkenliği, adım sayısı, aktivite kalorileri, stres seviyesi, toparlanma puanı ve cilt puanı dahil) Supabase'in bulut altyapısında saklanabilir</li>
                 <li>Veriler şifreli bağlantılar (TLS) üzerinden iletilir ve güvenli olarak saklanır</li>
                 <li>Supabase sunucuları AWS altyapısında barındırılır</li>
                 <li>OPUS'u hesap oluşturmadan kullanabilirsiniz — senkronizasyon tamamen isteğe bağlıdır</li>
@@ -583,7 +588,7 @@
             <h2>7. Üçüncü Taraf Hizmetleri</h2>
             <p>OPUS aşağıdaki üçüncü taraf hizmetlerle entegre çalışır:</p>
             <ul>
-                <li><strong>OpenAI API (GPT-4o):</strong> OPUS Pro Bulut Cilt Analizi için kullanılır. Cilt tarama fotoğrafınız backend üzerinden OpenAI'a AI analizi için gönderilir. OpenAI fotoğrafınızı saklamaz ve API verilerini model eğitimi için kullanmaz. Tüm ayrıntılar için Bölüm 3'e bakın</li>
+                <li><strong>OpenAI API (GPT-4o):</strong> OPUS Pro Bulut Cilt Analizi ve günlük wellness içgörüleri için kullanılır. Cilt tarama fotoğrafınız ve günlük sağlık metrikleriniz backend üzerinden OpenAI'a AI analizi için gönderilir. OpenAI fotoğrafınızı saklamaz ve API verilerini model eğitimi için kullanmaz. Tüm ayrıntılar için Bölüm 3'e bakın</li>
                 <li><strong>Railway:</strong> Bulut Analizi isteklerini alan ve OpenAI'a yönlendiren backend sunucumuzu barındırır (<a href="https://railway.app" target="_blank">railway.app</a>). Fotoğraflar Railway'de saklanmaz</li>
                 <li><strong>Supabase:</strong> İsteğe bağlı hesap ve veri senkronizasyonu için kullanılır. AWS altyapısında barındırılır</li>
                 <li><strong>Apple HealthKit:</strong> Veriler Apple kurallarına uygun olarak korunur</li>
@@ -618,7 +623,7 @@
 
         <!-- ═══ 日本語 ═══ -->
         <div id="ja" class="section">
-            <p><strong>最終更新日：</strong>2026年3月14日</p>
+            <p><strong>最終更新日：</strong>2026年3月18日</p>
 
             <h2>1. 概要</h2>
             <p>OPUSは、生体シグナルを追跡し、パーソナライズされた健康インサイトを提供するiOSアプリケーションです。お客様のプライバシーは私たちの最優先事項です。</p>
@@ -638,11 +643,12 @@
             <ul>
                 <li>圧縮された肌スキャン写真（名前、メール、個人識別情報は含まれません）</li>
                 <li>基本的なデバイスコンテキスト（照明スコア、スキャン回数）</li>
+                <li>お客様の日々のウェルネスメトリクス（睡眠時間、心拍変動、歩数、活動カロリー、肌スコア）をAIによるパーソナライズされた日次インサイトに使用 — お客様の明示的な同意がある場合のみ</li>
             </ul>
             <p><strong>データを処理する主体：</strong></p>
             <ul>
                 <li><strong>Railway上のOPUSサーバー</strong>（<a href="https://railway.app" target="_blank">railway.app</a>）— スキャンを受信し転送します</li>
-                <li><strong>OpenAI API</strong>（<a href="https://openai.com" target="_blank">openai.com</a>）— GPT-4oビジョンAIモデルを使用して画像を処理します</li>
+                <li><strong>OpenAI API</strong>（<a href="https://openai.com" target="_blank">openai.com</a>）— GPT-4oビジョンAIモデルを使用して画像を処理し、お客様の健康メトリクスからパーソナライズされた日次ウェルネスインサイトを生成します</li>
             </ul>
             <p><strong>データの取り扱い：</strong></p>
             <ul>
@@ -663,7 +669,7 @@
             <h2>4. データ同期</h2>
             <p>OPUSはオプションのクラウド同期に<strong>Supabase</strong>（supabase.com）を使用します：</p>
             <ul>
-                <li>アカウントを作成するか同期を有効にすると、プロフィールデータと健康サマリーがSupabaseのクラウドインフラに保存される場合があります</li>
+                <li>アカウントを作成するか同期を有効にすると、プロフィールデータと日々のウェルネスメトリクス（睡眠時間、心拍変動、歩数、活動カロリー、ストレスレベル、回復スコア、肌スコアを含む）がSupabaseのクラウドインフラに保存される場合があります</li>
                 <li>データは暗号化された接続（TLS）で送信され、安全に保存されます</li>
                 <li>SupabaseサーバーはAWSインフラでホストされています</li>
                 <li>アカウントを作成せずにOPUSを使用できます — 同期は完全にオプションです</li>
@@ -687,7 +693,7 @@
             <h2>7. サードパーティサービス</h2>
             <p>OPUSは以下のサードパーティサービスと統合しています：</p>
             <ul>
-                <li><strong>OpenAI API（GPT-4o）：</strong>OPUS Proクラウド肌分析に使用。肌スキャン写真がバックエンド経由でOpenAIにAI分析のために送信されます。OpenAIは写真を保存せず、APIデータをモデルトレーニングに使用しません。詳細はセクション3をご覧ください</li>
+                <li><strong>OpenAI API（GPT-4o）：</strong>OPUS Proクラウド肌分析と日次ウェルネスインサイトに使用。肌スキャン写真と日次健康メトリクスがバックエンド経由でOpenAIにAI分析のために送信されます。OpenAIは写真を保存せず、APIデータをモデルトレーニングに使用しません。詳細はセクション3をご覧ください</li>
                 <li><strong>Railway：</strong>クラウド分析リクエストを受信しOpenAIに転送するバックエンドサーバーをホスト（<a href="https://railway.app" target="_blank">railway.app</a>）。写真はRailwayに保存されません</li>
                 <li><strong>Supabase：</strong>オプションのアカウントとデータ同期に使用。AWSインフラでホスト</li>
                 <li><strong>Apple HealthKit：</strong>データはAppleのガイドラインに準拠して保護されます</li>
@@ -722,7 +728,7 @@
 
         <!-- ═══ 한국어 ═══ -->
         <div id="ko" class="section">
-            <p><strong>최종 업데이트:</strong> 2026년 3월 14일</p>
+            <p><strong>최종 업데이트:</strong> 2026년 3월 18일</p>
 
             <h2>1. 개요</h2>
             <p>OPUS는 생체 신호를 추적하고 개인 맞춤 건강 인사이트를 제공하는 iOS 애플리케이션입니다. 귀하의 개인정보 보호는 저희의 최우선 과제입니다.</p>
@@ -742,11 +748,12 @@
             <ul>
                 <li>압축된 피부 스캔 사진 (이름, 이메일 또는 개인 식별 정보 미포함)</li>
                 <li>기본 기기 컨텍스트 (조명 점수, 스캔 횟수)</li>
+                <li>귀하의 일일 웰니스 메트릭(수면 시간, 심박변이도, 걸음 수, 활동 칼로리, 피부 점수)을 AI 기반 맞춤 일일 인사이트에 사용 — 귀하의 명시적 동의가 있는 경우에만</li>
             </ul>
             <p><strong>데이터 처리 주체:</strong></p>
             <ul>
                 <li><strong>Railway의 OPUS 서버</strong> (<a href="https://railway.app" target="_blank">railway.app</a>) — 스캔을 수신하고 라우팅합니다</li>
-                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — GPT-4o 비전 AI 모델을 사용하여 이미지를 처리합니다</li>
+                <li><strong>OpenAI API</strong> (<a href="https://openai.com" target="_blank">openai.com</a>) — GPT-4o 비전 AI 모델을 사용하여 이미지를 처리하고, 귀하의 건강 메트릭에서 맞춤형 일일 웰니스 인사이트를 생성합니다</li>
             </ul>
             <p><strong>데이터 처리 방법:</strong></p>
             <ul>
@@ -767,7 +774,7 @@
             <h2>4. 데이터 동기화</h2>
             <p>OPUS는 선택적 클라우드 동기화를 위해 <strong>Supabase</strong>(supabase.com)를 사용합니다:</p>
             <ul>
-                <li>계정을 만들거나 동기화를 활성화하면 프로필 데이터와 건강 요약이 Supabase의 클라우드 인프라에 저장될 수 있습니다</li>
+                <li>계정을 만들거나 동기화를 활성화하면 프로필 데이터와 일일 웰니스 메트릭(수면 시간, 심박변이도, 걸음 수, 활동 칼로리, 스트레스 수준, 회복 점수, 피부 점수 포함)이 Supabase의 클라우드 인프라에 저장될 수 있습니다</li>
                 <li>데이터는 암호화된 연결(TLS)을 통해 전송되고 안전하게 저장됩니다</li>
                 <li>Supabase 서버는 AWS 인프라에서 호스팅됩니다</li>
                 <li>계정을 만들지 않고도 OPUS를 사용할 수 있습니다 — 동기화는 완전히 선택 사항입니다</li>
@@ -791,7 +798,7 @@
             <h2>7. 서드파티 서비스</h2>
             <p>OPUS는 다음 서드파티 서비스와 통합됩니다:</p>
             <ul>
-                <li><strong>OpenAI API(GPT-4o):</strong> OPUS Pro 클라우드 피부 분석에 사용. 피부 스캔 사진이 백엔드를 통해 OpenAI로 AI 분석을 위해 전송됩니다. OpenAI는 사진을 저장하지 않으며 API 데이터를 모델 훈련에 사용하지 않습니다. 자세한 내용은 섹션 3을 참조하세요</li>
+                <li><strong>OpenAI API(GPT-4o):</strong> OPUS Pro 클라우드 피부 분석과 일일 웰니스 인사이트에 사용. 피부 스캔 사진과 일일 건강 메트릭이 백엔드를 통해 OpenAI로 AI 분석을 위해 전송됩니다. OpenAI는 사진을 저장하지 않으며 API 데이터를 모델 훈련에 사용하지 않습니다. 자세한 내용은 섹션 3을 참조하세요</li>
                 <li><strong>Railway:</strong> 클라우드 분석 요청을 수신하고 OpenAI로 라우팅하는 백엔드 서버 호스팅 (<a href="https://railway.app" target="_blank">railway.app</a>). 사진은 Railway에 저장되지 않습니다</li>
                 <li><strong>Supabase:</strong> 선택적 계정 및 데이터 동기화에 사용. AWS 인프라에서 호스팅</li>
                 <li><strong>Apple HealthKit:</strong> 데이터는 Apple 가이드라인에 따라 보호됩니다</li>
@@ -826,7 +833,7 @@
 
         <div class="footer">
             <p>&copy; 2026 OPUS. All rights reserved.</p>
-            <p>Effective date: March 14, 2026</p>
+            <p>Effective date: March 18, 2026</p>
         </div>
     </div>
 
